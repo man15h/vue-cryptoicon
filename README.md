@@ -3,9 +3,7 @@
 
 # vue-cryptoicon
 
-Beutiful pixel perfect 400+ cryptocurrency and 10+ Fiat currency icon
-
-
+Beautiful pixel perfect 400+ cryptocurrency and 10+ Fiat currency icon, in a range of styles and sizes
 
 ![Vue-Cryptoicon](public/cryptoicons.png)
 
@@ -35,13 +33,15 @@ main.js
 import Vue from 'vue';
 import Cryptoicon from 'vue-cryptoicon';
 // For all icons
-import icon from 'vue-cryptoicon/icons';
+import icon from 'vue-cryptoicon/src/icons';
 Cryptoicon.add(icon);
 Vue.use(Cryptoicon);
 
 // selective icons 
 import { Btc, Eth, Xrp, Eos, Bnb, Tron } from './icons';
 Cryptoicon.add([Btc, Eth, Xrp, Eos, Bnb, Tron]);
+Vue.use(Cryptoicon);
+
 
 ```
 
@@ -63,7 +63,7 @@ App.vue
 | Name          | Description          | Type         | Default        | Accepted values          |
 | ------------- | -------------------- | ------------ | -------------- | ------------------------ |
 | `symbol`      | Cryptocurrency symbol| `String`     | -              | Valid and Available      |
-| `color`       | Color of the symbol  | `String`     | color          | Hex/ Color               |
+| `color`       | Color of the symbol  | `String`     | color          | HEX or color name        |
 | `size`        | Size of the icon     | `Number`     | 24             | Positive integer         |
 
 ### Advance
@@ -78,3 +78,7 @@ Vue.use(Cryptoicon, { size: '50', color: 'black' });
 ## License
 
 [MIT](LICENSE) license.
+
+## Special Thanks 👏
+
+[Atomic labs]('https://github.com/atomiclabs') for [svg icons](https://github.com/atomiclabs/cryptocurrency-icons/)
