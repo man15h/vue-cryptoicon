@@ -38,7 +38,7 @@ Cryptoicon.add(icon);
 Vue.use(Cryptoicon);
 
 // selective icons 
-import { Btc, Eth, Xrp, Eos, Bnb, Tron } from './icons';
+import { Btc, Eth, Xrp, Eos, Bnb, Tron } from 'vue-cryptoicon/src/icons';
 Cryptoicon.add([Btc, Eth, Xrp, Eos, Bnb, Tron]);
 Vue.use(Cryptoicon);
 

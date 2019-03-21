@@ -1,0 +1,11 @@
+@import './variables.scss';
+body {
+    margin: 0;
+    padding: 0;
+    background: $bgPrimary;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}

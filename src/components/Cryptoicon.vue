@@ -1,15 +1,12 @@
 <template>
-  <div :class="`cryptoicon--${symbol}`">
-    <svg
-      :width="size"
-      :height="size"
-      :class="`cryptoicon--${symbol}-svg`"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 32 32"
-      @click="$emit('click')"
-      v-html="icon"
-    />
-  </div>
+  <svg
+    :width="size"
+    :height="size"
+    :class="`cryptoicon--${symbol}`"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    @click="$emit('click')"
+    v-html="icon" />
 </template>
 
 <script>

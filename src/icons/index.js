@@ -338,7 +338,7 @@ import Sngls from './sngls';
 import Snm from './snm';
 import Snt from './snt';
 import Soc from './soc';
-import Spank from './spank';
+import Spnk from './spnk';
 import Sphtx from './sphtx';
 import Srn from './srn';
 import Stak from './stak';
@@ -440,7 +440,7 @@ import Zel from './zel';
 import Zen from './zen';
 import Zest from './zest';
 import Zil from './zil';
-import Zilla from './zilla';
+import Zla from './zla';
 import Zrx from './zrx';
 export {
   Abt,
@@ -767,7 +767,7 @@ export {
   Snm,
   Snt,
   Soc,
-  Spank,
+  Spnk,
   Sphtx,
   Srn,
   Stak,
@@ -862,7 +862,7 @@ export {
   Zen,
   Zest,
   Zil,
-  Zilla,
+  Zla,
   Zrx
 };
 export default [
@@ -1191,7 +1191,7 @@ export default [
   Snm,
   Snt,
   Soc,
-  Spank,
+  Spnk,
   Sphtx,
   Srn,
   Stak,
@@ -1286,6 +1286,6 @@ export default [
   Zen,
   Zest,
   Zil,
-  Zilla,
+  Zla,
   Zrx
 ];
