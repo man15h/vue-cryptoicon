@@ -1,5 +1,13 @@
 [
 	{
+		"symbol": "$PAC",
+		"name": "PACcoin"
+	},
+	{
+		"symbol": "2GIVE",
+		"name": "2Give"
+	},
+	{
 		"symbol": "ABT",
 		"name": "Arcblock"
 	},
@@ -32,6 +40,10 @@
 		"name": "Aeon"
 	},
 	{
+		"symbol": "AEUR",
+		"name": "Augmint Euro Token"
+	},
+	{
 		"symbol": "AGI",
 		"name": "SingularityNET"
 	},
@@ -42,6 +54,10 @@
 	{
 		"symbol": "AION",
 		"name": "Aion"
+	},
+	{
+		"symbol": "AMB",
+		"name": "Amber"
 	},
 	{
 		"symbol": "AMP",
@@ -124,6 +140,10 @@
 		"name": "Bitcoin Cash"
 	},
 	{
+		"symbol": "BCIO",
+		"name": "Blockchain.io"
+	},
+	{
 		"symbol": "BCN",
 		"name": "Bytecoin"
 	},
@@ -138,6 +158,10 @@
 	{
 		"symbol": "BDL",
 		"name": "Bitdeal"
+	},
+	{
+		"symbol": "BEAM",
+		"name": "Beam"
 	},
 	{
 		"symbol": "BELA",
@@ -224,16 +248,24 @@
 		"name": "BitcoinZ"
 	},
 	{
+		"symbol": "BTDX",
+		"name": "Bitcloud"
+	},
+	{
 		"symbol": "BTG",
 		"name": "Bitcoin Gold"
 	},
 	{
 		"symbol": "BTM",
-		"name": "Bitmark"
+		"name": "Bytom"
 	},
 	{
 		"symbol": "BTS",
 		"name": "BitShares"
+	},
+	{
+		"symbol": "BTT",
+		"name": "BitTorrent"
 	},
 	{
 		"symbol": "BTX",
@@ -268,8 +300,16 @@
 		"name": "ChatCoin"
 	},
 	{
+		"symbol": "CHIPS",
+		"name": "CHIPS"
+	},
+	{
 		"symbol": "CIX",
 		"name": "Cryptonetix"
+	},
+	{
+		"symbol": "CLAM",
+		"name": "Clams"
 	},
 	{
 		"symbol": "CLOAK",
@@ -336,8 +376,8 @@
 		"name": "Civic"
 	},
 	{
-		"symbol": "DASH",
-		"name": "Dash"
+		"symbol": "DAI",
+		"name": "Dai"
 	},
 	{
 		"symbol": "DASH",
@@ -386,6 +426,10 @@
 	{
 		"symbol": "DLT",
 		"name": "Agrello"
+	},
+	{
+		"symbol": "DNR",
+		"name": "Denarius"
 	},
 	{
 		"symbol": "DNT",
@@ -460,6 +504,10 @@
 		"name": "EmerCoin"
 	},
 	{
+		"symbol": "EMC2",
+		"name": "Einsteinium"
+	},
+	{
 		"symbol": "ENG",
 		"name": "Enigma"
 	},
@@ -470,6 +518,14 @@
 	{
 		"symbol": "ENTRP",
 		"name": "Hut34 Entropy"
+	},
+	{
+		"symbol": "EON",
+		"name": "EOS Network"
+	},
+	{
+		"symbol": "EOP",
+		"name": "EOP"
 	},
 	{
 		"symbol": "EOS",
@@ -584,6 +640,10 @@
 		"name": "GENERIC"
 	},
 	{
+		"symbol": "GIN",
+		"name": "GINcoin"
+	},
+	{
 		"symbol": "GLXT",
 		"name": "GLX Token"
 	},
@@ -606,6 +666,10 @@
 	{
 		"symbol": "GRC",
 		"name": "Gridcoin"
+	},
+	{
+		"symbol": "GRIN",
+		"name": "Grin"
 	},
 	{
 		"symbol": "GRS",
@@ -648,6 +712,10 @@
 		"name": "HOdlcoin"
 	},
 	{
+		"symbol": "HOT",
+		"name": "Holo"
+	},
+	{
 		"symbol": "HPB",
 		"name": "High Performance Blockchain"
 	},
@@ -682,6 +750,10 @@
 	{
 		"symbol": "IGNIS",
 		"name": "Ignis"
+	},
+	{
+		"symbol": "ILK",
+		"name": "Inlock Token"
 	},
 	{
 		"symbol": "INK",
@@ -812,6 +884,10 @@
 		"name": "Medibloc"
 	},
 	{
+		"symbol": "MEETONE",
+		"name": "MEET.ONE"
+	},
+	{
 		"symbol": "MIOTA",
 		"name": "IOTA"
 	},
@@ -916,6 +992,10 @@
 		"name": "Autonio"
 	},
 	{
+		"symbol": "NLC2",
+		"name": "NoLimitCoin"
+	},
+	{
 		"symbol": "NLG",
 		"name": "Gulden"
 	},
@@ -960,12 +1040,12 @@
 		"name": "SoMee.Social"
 	},
 	{
-		"symbol": "OOT",
-		"name": "Utrum"
+		"symbol": "ONT",
+		"name": "Ontology"
 	},
 	{
-		"symbol": "OST",
-		"name": "OST"
+		"symbol": "OOT",
+		"name": "Utrum"
 	},
 	{
 		"symbol": "OST",
@@ -1050,6 +1130,10 @@
 	{
 		"symbol": "PPT",
 		"name": "Populous"
+	},
+	{
+		"symbol": "PRE",
+		"name": "Presearch"
 	},
 	{
 		"symbol": "PRL",
@@ -1168,6 +1252,10 @@
 		"name": "Steem Dollars"
 	},
 	{
+		"symbol": "SBERBANK",
+		"name": "SBERBANK"
+	},
+	{
 		"symbol": "SC",
 		"name": "Siacoin"
 	},
@@ -1190,10 +1278,6 @@
 	{
 		"symbol": "SLS",
 		"name": "SaluS"
-	},
-	{
-		"symbol": "SMART",
-		"name": "SmartCash"
 	},
 	{
 		"symbol": "SMART",
@@ -1292,6 +1376,10 @@
 		"name": "Ternio"
 	},
 	{
+		"symbol": "TGCH",
+		"name": "TrueGalaxyCash"
+	},
+	{
 		"symbol": "THETA",
 		"name": "Theta Network"
 	},
@@ -1342,6 +1430,10 @@
 	{
 		"symbol": "TUSD",
 		"name": "True USD"
+	},
+	{
+		"symbol": "TZC",
+		"name": "TrezarCoin"
 	},
 	{
 		"symbol": "UBQ",
@@ -1402,6 +1494,10 @@
 	{
 		"symbol": "VTC",
 		"name": "Vertcoin"
+	},
+	{
+		"symbol": "VTHO",
+		"name": "VeThor Token"
 	},
 	{
 		"symbol": "WABI",
@@ -1512,10 +1608,6 @@
 		"name": "XRP"
 	},
 	{
-		"symbol": "XRP",
-		"name": "XRP"
-	},
-	{
 		"symbol": "XSG",
 		"name": "SnowGem"
 	},
@@ -1558,14 +1650,6 @@
 	{
 		"symbol": "ZEN",
 		"name": "Horizen"
-	},
-	{
-		"symbol": "ZEN",
-		"name": "Horizen"
-	},
-	{
-		"symbol": "ZEST",
-		"name": "Zest"
 	},
 	{
 		"symbol": "ZEST",

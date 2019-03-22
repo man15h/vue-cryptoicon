@@ -1,6 +1,16 @@
 const symbols = require('./../manifest.json');
 const axios = require('axios');
 const fs = require('fs');
+const ignore = [
+  '$PAC',
+  '2GIVE',
+  'BTDX',
+  'CALM',
+  'DNR',
+  'SPANK',
+  'TGCH',
+  'ZILLA'
+];
 async function fetchData(symbol) {
   try {
     const { data } = await axios.get(
@@ -15,29 +25,33 @@ async function fetchData(symbol) {
 async function processSymbol() {
   let details = [];
   for (const item of symbols) {
-    const { data } = await fetchData(item.symbol);
-    if (data && data.coins && data.coins.length > 0) {
-      const coin = data.coins[0];
-      if (coin) {
-        let info = {
-          id: coin.id,
-          symbol: coin.symbol,
-          name: coin.name,
-          circulatingSupply: coin.circulatingSupply,
-          totalSupply: coin.totalSupply,
-          rank: coin.rank
-        };
-        details.push(info);
-      } else {
-        let info = {
-          id: null,
-          symbol: item.symbol,
-          name: item.name,
-          circulatingSupply: null,
-          totalSupply: null,
-          rank: null
-        };
-        details.push(info);
+    if (ignore.indexOf(item.symbol) > -1) {
+      console.log('ignore');
+    } else {
+      const { data } = await fetchData(item.symbol);
+      if (data && data.coins && data.coins.length > 0) {
+        const coin = data.coins[0];
+        if (coin) {
+          let info = {
+            id: coin.id,
+            symbol: item.symbol,
+            name: item.name,
+            circulatingSupply: coin.circulatingSupply,
+            totalSupply: coin.totalSupply,
+            rank: coin.rank
+          };
+          details.push(info);
+        } else {
+          let info = {
+            id: null,
+            symbol: item.symbol,
+            name: item.name,
+            circulatingSupply: null,
+            totalSupply: null,
+            rank: 2000
+          };
+          details.push(info);
+        }
       }
     }
   }

@@ -6,9 +6,11 @@ import Add from './add';
 import Adx from './adx';
 import Ae from './ae';
 import Aeon from './aeon';
+import Aeur from './aeur';
 import Agi from './agi';
 import Agrs from './agrs';
 import Aion from './aion';
+import Amb from './amb';
 import Amp from './amp';
 import Ant from './ant';
 import Apex from './apex';
@@ -32,10 +34,12 @@ import Bcbc from './bcbc';
 import Bcc from './bcc';
 import Bcd from './bcd';
 import Bch from './bch';
+import Bcio from './bcio';
 import Bcn from './bcn';
 import Bco from './bco';
 import Bcpt from './bcpt';
 import Bdl from './bdl';
+import Beam from './beam';
 import Bela from './bela';
 import Bix from './bix';
 import Blcn from './blcn';
@@ -61,6 +65,7 @@ import Btdx from './brd';
 import Btg from './btg';
 import Btm from './btm';
 import Bts from './bts';
+import Btt from './btt';
 import Btx from './btx';
 import Burst from './burst';
 
@@ -72,6 +77,7 @@ import Cdt from './cdt';
 import Cenz from './cenz';
 import Chain from './chain';
 import Chat from './chat';
+import Chips from './chips';
 import Cix from './cix';
 import Clam from './clam';
 import Cloak from './cloak';
@@ -92,6 +98,7 @@ import Ctxc from './ctxc';
 import Cvc from './cvc';
 
 // D icons
+import Dai from './dai';
 import Dash from './dash';
 import Dat from './dat';
 import Data from './data';
@@ -124,9 +131,12 @@ import Elf from './elf';
 import Elix from './elix';
 import Ella from './ella';
 import Emc from './emc';
+import Emc2 from './emc2';
 import Eng from './eng';
 import Enj from './enj';
 import Entrp from './entrp';
+import Eon from './eon';
+import Eop from './eop';
 import Eos from './eos';
 import Eqli from './eqli';
 import Equa from './equa';
@@ -159,12 +169,14 @@ import Gbp from './gbp';
 import Gbx from './gbx';
 import Gbyte from './gbyte';
 import Generic from './generic';
+import Gin from './gin';
 import Glxt from './glxt';
 import Gmr from './gmr';
 import Gno from './gno';
 import Gnt from './gnt';
 import Gold from './gold';
 import Grc from './grc';
+import Grin from './grin';
 import Grs from './grs';
 import Gsc from './gsc';
 import Gto from './gto';
@@ -176,6 +188,7 @@ import Gzr from './gzr';
 // H icons
 import Hight from './hight';
 import Hodl from './hodl';
+import Hot from './hot';
 import Hpb from './hpb';
 import Hsr from './hsr';
 import Ht from './ht';
@@ -186,6 +199,7 @@ import Hush from './hush';
 import Icn from './icn';
 import Icx from './icx';
 import Ignis from './ignis';
+import Ilk from './ilk';
 import Ink from './ink';
 import Ins from './ins';
 import Ion from './ion';
@@ -226,6 +240,8 @@ import Mco from './mco';
 import Mda from './mda';
 import Mds from './mds';
 import Med from './med';
+import Meetone from './meetone';
+
 import Miota from './miota';
 import Mith from './mith';
 import Mkr from './mkr';
@@ -254,6 +270,7 @@ import Neu from './neu';
 import Nexo from './nexo';
 import Ngc from './ngc';
 import Nio from './nio';
+import Nlc2 from './nlc2';
 import Nlg from './nlg';
 import Nmc from './nmc';
 import Npxs from './npxs';
@@ -292,6 +309,7 @@ import Powr from './powr';
 import Ppc from './ppc';
 import Ppp from './ppp';
 import Ppt from './ppt';
+import Pre from './pre';
 import Prl from './prl';
 import Pungo from './pungo';
 import Pura from './pura';
@@ -327,6 +345,7 @@ import Safe from './safe';
 import Salt from './salt';
 import San from './san';
 import Sbd from './sbd';
+import Sberbank from './sberbank';
 import Sc from './sc';
 import Shift from './shift';
 import Sib from './sib';
@@ -392,7 +411,7 @@ import Vivo from './vivo';
 import Vrc from './vrc';
 import Vrsc from './vrsc';
 import Vtc from './vtc';
-
+import Vtho from './vtho';
 // W icons
 import Wabi from './wabi';
 import Wan from './wan';
@@ -451,9 +470,11 @@ export {
   Adx,
   Ae,
   Aeon,
+  Aeur,
   Agi,
   Agrs,
   Aion,
+  Amb,
   Amp,
   Ant,
   Apex,
@@ -476,10 +497,12 @@ export {
   Bcc,
   Bcd,
   Bch,
+  Bcio,
   Bcn,
   Bco,
   Bcpt,
   Bdl,
+  Beam,
   Bela,
   Bix,
   Blcn,
@@ -505,6 +528,7 @@ export {
   Btg,
   Btm,
   Bts,
+  Btt,
   Btx,
   Burst,
   // C starts
@@ -514,6 +538,7 @@ export {
   Cenz,
   Chain,
   Chat,
+  Chips,
   Cix,
   Clam,
   Cloak,
@@ -534,6 +559,7 @@ export {
   Cred,
   Cdt,
   // D starts
+  Dai,
   Dash,
   Dat,
   Data,
@@ -565,9 +591,12 @@ export {
   Elix,
   Ella,
   Emc,
+  Emc2,
   Eng,
   Enj,
   Entrp,
+  Eon,
+  Eop,
   Eos,
   Eqli,
   Equa,
@@ -598,12 +627,14 @@ export {
   Gbx,
   Gbyte,
   Generic,
+  Gin,
   Glxt,
   Gmr,
   Gno,
   Gnt,
   Gold,
   Grc,
+  Grin,
   Grs,
   Gsc,
   Gto,
@@ -615,6 +646,7 @@ export {
   // H starts
   Hight,
   Hodl,
+  Hot,
   Hpb,
   Hsr,
   Ht,
@@ -625,6 +657,7 @@ export {
   Icn,
   Icx,
   Ignis,
+  Ilk,
   Ink,
   Ins,
   Ion,
@@ -661,6 +694,7 @@ export {
   Mda,
   Mds,
   Med,
+  Meetone,
   Miota,
   Mith,
   Mkr,
@@ -688,6 +722,7 @@ export {
   Nexo,
   Ngc,
   Nio,
+  Nlc2,
   Nlg,
   Nmc,
   Npxs,
@@ -724,6 +759,7 @@ export {
   Ppc,
   Ppp,
   Ppt,
+  Pre,
   Prl,
   Pungo,
   Pura,
@@ -756,6 +792,7 @@ export {
   Salt,
   San,
   Sbd,
+  Sberbank,
   Sc,
   Shift,
   Sib,
@@ -818,6 +855,7 @@ export {
   Vrc,
   Vrsc,
   Vtc,
+  Vtho,
   // W starts
   Wabi,
   Wan,
@@ -874,9 +912,11 @@ export default [
   Adx,
   Ae,
   Aeon,
+  Aeur,
   Agi,
   Agrs,
   Aion,
+  Amb,
   Amp,
   Ant,
   Apex,
@@ -899,10 +939,12 @@ export default [
   Bcc,
   Bcd,
   Bch,
+  Bcio,
   Bcn,
   Bco,
   Bcpt,
   Bdl,
+  Beam,
   Bela,
   Bix,
   Blcn,
@@ -928,6 +970,7 @@ export default [
   Btg,
   Btm,
   Bts,
+  Btt,
   Btx,
   Burst,
   // C starts
@@ -937,6 +980,7 @@ export default [
   Cenz,
   Chain,
   Chat,
+  Chips,
   Cix,
   Clam,
   Cloak,
@@ -957,6 +1001,7 @@ export default [
   Cred,
   Cdt,
   // D starts
+  Dai,
   Dash,
   Dat,
   Data,
@@ -988,9 +1033,12 @@ export default [
   Elix,
   Ella,
   Emc,
+  Emc2,
   Eng,
   Enj,
   Entrp,
+  Eon,
+  Eop,
   Eos,
   Eqli,
   Equa,
@@ -1022,12 +1070,14 @@ export default [
   Gbx,
   Gbyte,
   Generic,
+  Gin,
   Glxt,
   Gmr,
   Gno,
   Gnt,
   Gold,
   Grc,
+  Grin,
   Grs,
   Gsc,
   Gto,
@@ -1039,6 +1089,7 @@ export default [
   // H starts
   Hight,
   Hodl,
+  Hot,
   Hpb,
   Hsr,
   Ht,
@@ -1049,6 +1100,7 @@ export default [
   Icn,
   Icx,
   Ignis,
+  Ilk,
   Ink,
   Ins,
   Ion,
@@ -1085,6 +1137,7 @@ export default [
   Mda,
   Mds,
   Med,
+  Meetone,
   Miota,
   Mith,
   Mkr,
@@ -1112,6 +1165,7 @@ export default [
   Nexo,
   Ngc,
   Nio,
+  Nlc2,
   Nlg,
   Nmc,
   Npxs,
@@ -1148,6 +1202,7 @@ export default [
   Ppc,
   Ppp,
   Ppt,
+  Pre,
   Prl,
   Pungo,
   Pura,
@@ -1180,6 +1235,7 @@ export default [
   Salt,
   San,
   Sbd,
+  Sberbank,
   Sc,
   Shift,
   Sib,
@@ -1242,6 +1298,7 @@ export default [
   Vrc,
   Vrsc,
   Vtc,
+  Vtho,
   // W starts
   Wabi,
   Wan,

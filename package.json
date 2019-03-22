@@ -46,7 +46,8 @@
     "prod": "cross-env NODE_ENV=production vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test": "npm run test:unit",
-    "update": "node scripts/fetchDetails.js"
+    "update": "node scripts/fetchDetails.js",
+    "new": "node scripts/newIcons.js"
   },
   "husky": {
     "hooks": {

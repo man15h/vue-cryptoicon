@@ -424,6 +424,7 @@ h1 {
     cursor: pointer;
     &:hover {
       box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+      @include transition;
     }
     &.selected {
       // outline: 1px solid $secondary
