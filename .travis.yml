@@ -1,6 +1,4 @@
 languange: node_js
 node_js:
-  - stable
-script:
-  - yarn install
-  - yarn build
+  - "8"
+  - "9"
