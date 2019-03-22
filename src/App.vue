@@ -67,6 +67,8 @@
         <cryptoicon 
           :symbol="currency.symbol"
           :color="selectedTheme !='color' ? selectedTheme: ''"
+          generic
+          size="42"
           class="left" />
         <div class="right" >
           <h3>{{ currency.name }}</h3>

@@ -25,23 +25,35 @@ export default {
       type: [String, Number],
       default: '24'
     },
-    fallback: {
-      type: String,
-      default: null
+    generic: {
+      type: Boolean,
+      default: false
     }
   },
+  data() {
+    return {
+      lookupSymbol: new Map([['BCHSV', 'BSV'], ['BCHABC', 'BAB']])
+    };
+  },
   computed: {
+    lSymbol() {
+      return this.symbol && this.symbol.toLowerCase();
+    },
+    uSymbol() {
+      return this.symbol && this.symbol.toUpperCase();
+    },
     icon() {
-      let icon = this.$options.lib.find(
-        i => i.symbol === this.symbol.toLowerCase()
-      );
+      const symbol = this.lookupSymbol.has(this.uSymbol)
+        ? this.lookupSymbol.get(this.uSymbol)
+        : this.symbol;
+      let icon = this.$options.lib.find(i => i.symbol === symbol.toLowerCase());
       if (icon) {
         return !this.color ? icon.colorIcon() : icon.plainIcon(this.color);
-      } else if (this.fallback && this.fallback === 'generic') {
-        let icon = this.$options.lib.find(i => i.symbol === 'generic');
-        return !this.color ? icon.colorIcon() : icon.plainIcon(this.color);
-      } else if (this.fallback) {
-        return `${this.fallback}/${this.symbol}.svg`;
+      } else if (this.generic) {
+        let icon = this.$options.lib.find(i => i.symbol == 'generic');
+        if (icon) {
+          return !this.color ? icon.colorIcon() : icon.plainIcon(this.color);
+        }
       } else {
         // eslint-disable-next-line no-console
         console.error(`Symbol of the icon is not correct: ${this.symbol}`);
