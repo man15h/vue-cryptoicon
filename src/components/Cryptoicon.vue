@@ -15,7 +15,7 @@ export default {
   props: {
     symbol: {
       type: String,
-      default: undefined
+      default: null
     },
     color: {
       type: String,
@@ -24,6 +24,10 @@ export default {
     size: {
       type: [String, Number],
       default: '24'
+    },
+    fallback: {
+      type: String,
+      default: null
     }
   },
   computed: {
@@ -32,11 +36,12 @@ export default {
         i => i.symbol === this.symbol.toLowerCase()
       );
       if (icon) {
-        if (!this.color) {
-          return icon.colorIcon();
-        } else {
-          return icon.plainIcon(this.color);
-        }
+        return !this.color ? icon.colorIcon() : icon.plainIcon(this.color);
+      } else if (this.fallback && this.fallback === 'generic') {
+        let icon = this.$options.lib.find(i => i.symbol === 'generic');
+        return !this.color ? icon.colorIcon() : icon.plainIcon(this.color);
+      } else if (this.fallback) {
+        return `${this.fallback}/${this.symbol}.svg`;
       } else {
         // eslint-disable-next-line no-console
         console.error(`Symbol of the icon is not correct: ${this.symbol}`);

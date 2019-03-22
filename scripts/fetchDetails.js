@@ -11,6 +11,14 @@ const ignore = [
   'TGCH',
   'ZILLA'
 ];
+const fiatCurrencies = new Map([
+  ['USD', 'US Dollar'],
+  ['CNY', 'Chinese Yuan'],
+  ['EUR', 'Euro'],
+  ['GBP', 'Pound'],
+  ['JPY', 'Japanese Yen'],
+  ['RUB', 'Russian Ruble']
+]);
 async function fetchData(symbol) {
   try {
     const { data } = await axios.get(
@@ -35,10 +43,13 @@ async function processSymbol() {
           let info = {
             id: coin.id,
             symbol: item.symbol,
-            name: item.name,
+            name: fiatCurrencies.has(item.symbol)
+              ? fiatCurrencies.get(item.symbol)
+              : item.name,
             circulatingSupply: coin.circulatingSupply,
             totalSupply: coin.totalSupply,
-            rank: coin.rank
+            rank: coin.rank,
+            type: fiatCurrencies.has(item.symbol) ? 'fiat' : 'crypto'
           };
           details.push(info);
         } else {
@@ -48,7 +59,8 @@ async function processSymbol() {
             name: item.name,
             circulatingSupply: null,
             totalSupply: null,
-            rank: 2000
+            rank: 2000,
+            type: 'crypto'
           };
           details.push(info);
         }

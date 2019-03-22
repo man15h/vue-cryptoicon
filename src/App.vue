@@ -176,7 +176,7 @@ export default {
       currencies: data,
       searchValue: '',
       shuffleSpeed: 'shuffleMedium',
-      filterButtons: ['A-Z', 'Z-A', 'top', 'shuffle'],
+      filterButtons: ['A-Z', 'Z-A', 'top', 'fiat', 'shuffle'],
       themeButtons: ['white', 'black', 'color'],
       sortKey: 'symbol',
       sortOrder: 1,
@@ -211,7 +211,13 @@ export default {
   },
   computed: {
     filteredCurrencies() {
-      return this.filterBy(this.currencies, this.searchValue, 'name', 'symbol');
+      return this.filterBy(
+        this.currencies,
+        this.searchValue,
+        'name',
+        'symbol',
+        'type'
+      );
     },
     selectedIconObj() {
       return `{${this.selectedIcons.join(', ')}}`;
@@ -243,6 +249,8 @@ export default {
         this.sortKey = 'rank';
         this.sortOrder = 1;
         this.sortCurrencies();
+      } else if (key == 'fiat') {
+        this.searchValue = 'fiat';
       } else {
         this.sortKey = '';
         this.sortOrder = 1;
@@ -389,7 +397,7 @@ h1 {
 .theme-btn {
   display: flex;
   justify-content: space-between;
-  max-width: 300px;
+  max-width: 350px;
   width: 100%;
 }
 .theme-btn {
@@ -403,6 +411,7 @@ h1 {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
+  align-content: baseline;
   grid-row-start: 2;
   grid-column-start: 1;
   grid-column-end: 2;
