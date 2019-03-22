@@ -9,7 +9,7 @@ import App from './App.vue';
 import Cryptoicon from './components';
 import icon from './icons';
 Cryptoicon.add(icon);
-Vue.use(Cryptoicon, { size: '42', color: 'white' });
+Vue.use(Cryptoicon, { size: '42' });
 
 Vue.config.productionTip = false;
 new Vue({

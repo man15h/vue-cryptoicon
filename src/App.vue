@@ -1,6 +1,6 @@
 <template>
   <div 
-    :class="{'full': closeGuide}" 
+    :class="[{'full': closeGuide }, selectedTheme]" 
     class="container">
     <div 
       class="search-wrapper" >
@@ -12,14 +12,26 @@
           placeholder="Search icon">
       </div>
       <div class="button-wrapper">
-        <button 
-          v-for="btn in buttonType"
-          :key="btn"
-          :class="{'selected': btn == selectedBtn}"
-          class="button" 
-          @click="filter(btn)">
-          {{ btn }}
-        </button>
+        <div class="filter-btn">
+          <button 
+            v-for="btn in filterButtons"
+            :key="btn"
+            :class="{'selected': btn == selectedFilter}"
+            class="button" 
+            @click="filter(btn)">
+            {{ btn }}
+          </button>
+        </div>
+        <div class="theme-btn">
+          <button 
+            v-for="btn in themeButtons"
+            :key="btn"
+            :class="{'selected': btn == selectedTheme}"
+            class="button" 
+            @click="selectedTheme=btn">
+            {{ btn }}
+          </button>
+        </div>
       </div>
       <div 
         class="toggle-btn" 
@@ -54,6 +66,7 @@
         @click="selectIcon(currency.symbol)" >
         <cryptoicon 
           :symbol="currency.symbol"
+          :color="selectedTheme !='color' ? selectedTheme: ''"
           class="left" />
         <div class="right" >
           <h3>{{ currency.name }}</h3>
@@ -90,7 +103,11 @@
         import Cryptoicon from 'vue-cryptoicon';
         import {{ !selectedIcons.length ? 'icons' : selectedIconObj }} from 'vue-cryptoicon/src/icons';
         Cryptoicon.add({{ !selectedIcons.length ? 'icons' : selectedIconArr }});
-        Vue.use(Cryptoicon);   
+        Vue.use(Cryptoicon);  
+
+        // App.vue
+        // Bitcoin color icon
+        &lt;cryptoicon symbol="btc" size="24" /> 
       </prism>
       <h2>Props</h2>
       <table>
@@ -133,6 +150,12 @@
         //  main.js 
         Vue.use(Cryptoicon, { size: '50', color: 'black' });
       </prism>
+      <h2>Licence</h2>
+      <a 
+        href="https://github.com/man15h/vue-cryptoicon/blob/master/LICENSE" 
+        target="_blank"> 
+        MIT license.
+      </a>
     </div>
   </div>
 </template>
@@ -153,12 +176,14 @@ export default {
       currencies: data,
       searchValue: '',
       shuffleSpeed: 'shuffleMedium',
-      buttonType: ['A-Z', 'Z-A', 'top', 'fiat', 'shuffle'],
+      filterButtons: ['A-Z', 'Z-A', 'top', 'shuffle'],
+      themeButtons: ['white', 'black', 'color'],
       sortKey: 'symbol',
       sortOrder: 1,
       selectedIcons: [],
       closeGuide: false,
-      selectedBtn: 'A-Z',
+      selectedFilter: 'A-Z',
+      selectedTheme: 'white',
       props: [
         {
           name: 'symbol',
@@ -205,7 +230,7 @@ export default {
       }
     },
     filter(key) {
-      this.selectedBtn = key;
+      this.selectedFilter = key;
       if (key == 'shuffle') {
         this.shuffleDeck();
       } else if (key == 'A-Z' || key == 'Z-A') {
@@ -286,28 +311,26 @@ h1 {
     grid-template-columns: 100%;
   }
 }
-.search-wrapper {
-  grid-row-start: 1;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  position: relative;
-  grid-row-end: 2;
-  padding: 2rem;
-  @include tablet {
-    padding: 3rem 2rem 2rem;
-  }
-  height: 100px;
-  width: calc(100% - 4rem);
-  top: 0;
-  flex-direction: column;
-  background: $bgSecondary;
-  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+
 .search {
-  background: #fff;
+  &-wrapper {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    position: relative;
+    grid-row-end: 2;
+    padding: 2rem;
+    @include tablet {
+      padding: 3rem 2rem 2rem;
+    }
+    height: 100px;
+    width: calc(100% - 4rem);
+    top: 0;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
   border-radius: 3px;
   width: 100%;
   max-width: 70rem;
@@ -329,7 +352,6 @@ h1 {
     box-sizing: border-box;
     font-size: 1.4rem;
     font-family: 'Montserrat', sans-serif;
-    box-shadow: 0 2rem 1.3rem 0.1rem rgba(22, 49, 80, 0.1);
   }
 }
 
@@ -338,7 +360,7 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-width: 400px;
+    max-width: 70rem;
     width: 100%;
     align-items: center;
   }
@@ -352,21 +374,26 @@ h1 {
   outline: none !important;
   cursor: pointer;
   text-align: center;
-  background-color: white;
   border-radius: 50px;
   font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   text-decoration: none;
-  color: $textSecondary;
   line-height: 1;
   -webkit-transition: background-color 0.1s ease-out;
   -o-transition: background-color 0.1s ease-out;
   transition: background-color 0.1s ease-out;
-  &.selected {
-    background-color: $secondary;
-  }
+}
+.filter-btn,
+.theme-btn {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+  width: 100%;
+}
+.theme-btn {
+  max-width: 250px;
 }
 
 // button {
@@ -390,14 +417,11 @@ h1 {
   .icon {
     padding: 1.4rem 2.8rem;
     width: 230px;
-    color: white;
     display: flex;
-    background: $bgSecondary;
     border-radius: 0.6rem;
     margin-bottom: 2.8rem;
     max-height: 4rem;
     cursor: pointer;
-
     &:hover {
       box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
     }
@@ -451,10 +475,9 @@ h1 {
 }
 
 .guideline-wrapper {
-  background: white;
   max-width: 70rem;
   height: 100vh;
-  padding: 0 2.8rem 4.2rem;
+  padding: 0 2.8rem 0;
   color: $textSecondary;
   grid-row-start: 1;
   grid-column-start: 2;
@@ -489,6 +512,10 @@ h1 {
     @include transition;
     right: -700px;
     opacity: 0;
+  }
+  a {
+    color: rgba($primary, 0.7);
+    padding-bottom: 5rem;
   }
 }
 table {
@@ -575,6 +602,76 @@ table {
   }
   @include mobile {
     display: none;
+  }
+}
+//black theme
+.container.white {
+  background: $bgPrimary;
+  .search {
+    &-wrapper {
+      box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+      background: $bgSecondary;
+    }
+    background: #fff;
+  }
+  .button {
+    &-wrapper {
+    }
+    background-color: white;
+    color: $textSecondary;
+
+    &.selected {
+      background-color: $secondary;
+    }
+  }
+  .icon-wrapper {
+    color: white;
+    .icon {
+      background: $bgSecondary;
+    }
+  }
+  .guideline-wrapper {
+    background: white;
+  }
+}
+.container.black,
+.container.color {
+  background: $textMono3;
+  .search {
+    &-wrapper {
+      background: #fff;
+      box-shadow: 0;
+    }
+    background: #fff;
+    border: 1px solid $borderColor;
+  }
+  .button {
+    &-wrapper {
+    }
+    background-color: white;
+    border: 1px solid $borderColor;
+    color: $textSecondary;
+    &.selected {
+      background-color: $secondary;
+    }
+  }
+  .icon-wrapper {
+    color: white;
+    .icon {
+      background: #fff;
+      color: $textSecondary;
+    }
+  }
+  .toggle-btn {
+    border-left: 1px solid $borderColor;
+    border-bottom: 1px solid $borderColor;
+    border-top: 1px solid $borderColor;
+    right: -2px;
+    z-index: 10;
+  }
+  .guideline-wrapper {
+    background: white;
+    border-left: 1px solid $borderColor;
   }
 }
 </style>
