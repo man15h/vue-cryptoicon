@@ -54,8 +54,3 @@ export default {
   }
 };
 </script>
-<style scoped>
-div {
-  display: inline-flex;
-}
-</style>

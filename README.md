@@ -1,4 +1,4 @@
-<!--[![npm](https://img.shields.io/npm/v/vue-jazzicon.svg)](https://www.npmjs.com/package/vue-jazzicon)    [![travis](https://img.shields.io/travis/man15h/vue-jazzicon.svg)](https://www.npmjs.com/package/vue-jazzicon) [![npm](https://img.shields.io/npm/dw/vue-jazzicon.svg)](https://www.npmjs.com/package/vue-jazzicon) [![npm](https://img.shields.io/npm/l/vue-jazzicon.svg)](https://github.com/man15h/vue-jazzicon/blob/master/LICENSE)-->
+[![npm](https://img.shields.io/npm/v/vue-cryptoicon.svg)](https://www.npmjs.com/package/vue-cryptoicon)    [![travis](https://img.shields.io/travis/man15h/vue-cryptoicon.svg)](https://www.npmjs.com/package/vue-cryptoicon) [![npm](https://img.shields.io/npm/dw/vue-cryptoicon.svg)](https://www.npmjs.com/package/vue-cryptoicon) [![npm](https://img.shields.io/npm/l/vue-cryptoicon.svg)](https://github.com/man15h/vue-cryptoicon/blob/master/LICENSE)
 
 
 # vue-cryptoicon
@@ -8,7 +8,7 @@ Beautiful pixel perfect 400+ cryptocurrency and 10+ Fiat currency icon, in a ran
 ![Vue-Cryptoicon](public/cryptoicons.png)
 
 
-<!-- ## [Demo](https://vue-jazzicon.netlify.com/) -->
+## [Demo](https://vue-cryptoicon.netlify.com/)
 
 
 ## Install

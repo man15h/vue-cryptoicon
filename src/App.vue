@@ -1,147 +1,424 @@
 <template>
-  <div class="container">
-    <div class="search-wrapper">
+  <div 
+    :class="{'full': closeGuide}" 
+    class="container">
+    <div 
+      class="search-wrapper" >
       <div class="search">
         <input 
-          v-model="icon" 
+          v-model="searchValue" 
           type="search"
           class="search--input" 
-          placeholder="Search icon" >
+          placeholder="Search icon">
+      </div>
+      <div class="button-wrapper">
+        <button 
+          v-for="btn in buttonType"
+          :key="btn"
+          :class="{'selected': btn == selectedBtn}"
+          class="button" 
+          @click="filter(btn)">
+          {{ btn }}
+        </button>
+      </div>
+      <div 
+        class="toggle-btn" 
+        @click="closeGuide= !closeGuide">
+        <svg 
+          :class="{'rotate': closeGuide}" 
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 24 24" >
+          <g data-name="Layer 2">
+            <g data-name="arrowhead-right">
+              <rect 
+                width="24" 
+                height="24" 
+                transform="rotate(-90 12 12)" 
+                opacity="0"/>
+              <path d="M18.78 11.37l-4.78-6a1 1 0 0 0-1.41-.15 1 1 0 0 0-.15 1.41L16.71 12l-4.48 5.37a1 1 0 0 0 .13 1.41A1 1 0 0 0 13 19a1 1 0 0 0 .77-.36l5-6a1 1 0 0 0 .01-1.27z"/>
+              <path d="M7 5.37a1 1 0 0 0-1.61 1.26L9.71 12l-4.48 5.36a1 1 0 0 0 .13 1.41A1 1 0 0 0 6 19a1 1 0 0 0 .77-.36l5-6a1 1 0 0 0 0-1.27z"/>
+            </g>
+          </g>
+        </svg>
       </div>
     </div>
-    <div class="icon-wrapper">  
+    <transition-group 
+      :name="shuffleSpeed" 
+      tag="div" 
+      class="icon-wrapper">
       <div 
-        v-for="symbol in data" 
-        :key="symbol.symbol"
-        class="icon" >
+        v-for="currency in filteredCurrencies" 
+        :key="currency.id+currency.symbol"
+        :class="{'selected': isSelected(currency.symbol) > -1}"
+        class="icon"
+        @click="selectIcon(currency.symbol)" >
         <cryptoicon 
-          :symbol="symbol.symbol"
+          :symbol="currency.symbol"
           class="left" />
         <div class="right" >
-          <h3>{{ symbol.name }}</h3>
-          <p>{{ symbol.symbol }}</p>
+          <h3>{{ currency.name }}</h3>
+          <p>{{ currency.symbol }}</p>
         </div>
       </div>
-    </div>
-    <div class="guideline-wrapper">
-      <h1>vue-cryptoicon</h1>
-      <h4>
-        Beautiful pixel perfect 400+ cryptocurrency and 10+ Fiat currency icon, in a range of styles and sizes
-      </h4>
+    </transition-group>
+    <div 
+      :class="{'close': closeGuide}" 
+      class="guideline-wrapper">
+      <div class="title">
+        <h1>vue-cryptoicon  
+          <a 
+            class="github-button" 
+            href="https://github.com/man15h/vue-cryptoicon" 
+            data-show-count="true" 
+            aria-label="Star man15h/vue-cryptoicon on GitHub">Star</a></h1>
+        <h4>
+          Beautiful pixel perfect 400+ cryptocurrency and 10+ Fiat currency icon, in a range of styles and sizes
+        </h4>
+      </div>
       <h2>Install</h2>
-      <pre v-highlightjs><code class="javascript">const s = new Date().toString()</code></pre>
+      <p> Installing with NPM or Yarn </p>
+      <prism language="javascript">
+        npm install vue-cryptoicon // yarn add vue-cryptoicon
+      </prism>
+      <h2>Use</h2>
+      <p>
+        To use in your project, just import vue-cryptoicon and install into Vue.
+      </p>
+      <prism language="javascript">
+        //  main.js 
+        import Vue from 'vue';
+        import Cryptoicon from 'vue-cryptoicon';
+        import {{ !selectedIcons.length ? 'icons' : selectedIconObj }} from 'vue-cryptoicon/src/icons';
+        Cryptoicon.add({{ !selectedIcons.length ? 'icons' : selectedIconArr }});
+        Vue.use(Cryptoicon);   
+      </prism>
+      <h2>Props</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="text-align: left;">Name</th> 
+            <th style="text-align: left;">Description</th> 
+            <th style="text-align: left;">Type</th>
+            <th style="text-align: left;">Default</th>
+            <th style="text-align: left;">Accepted values</th>
+          </tr>
+        </thead> 
+        <tbody>
+          <tr 
+            v-for="prop in props" 
+            :key="prop.name">
+            <td style="text-align: left;">
+              <code>{{ prop.name }}</code>
+            </td> 
+            <td style="text-align: left;">
+              {{ prop.description }}
+            </td>
+            <td style="text-align: left;">
+              <code> {{ prop.type }}</code>
+            </td>
+            <td style="text-align: left;">
+              {{ prop.default }}
+            </td>
+            <td style="text-align: left;">
+              {{ prop.accepted }}
+            </td>
+          </tr> 
+        </tbody>
+      </table>
+      <h2>Advance</h2>
+      <p>
+        You can change the default value of size and color in main.js
+      </p>
+      <prism language="javascript">
+        //  main.js 
+        Vue.use(Cryptoicon, { size: '50', color: 'black' });
+      </prism>
     </div>
   </div>
 </template>
 <script>
-const symbols = require('./../manifest.json'); //with path
+import Vue from 'vue';
+import Vue2Filters from 'vue2-filters';
 const data = require('./data.json'); //with path
+import Prism from 'vue-prism-component';
+
 export default {
   name: 'App',
+  components: {
+    Prism
+  },
+  mixins: [Vue2Filters.mixin],
   data() {
     return {
-      symbols: symbols,
-      data: data,
-      icon: ''
+      currencies: data,
+      searchValue: '',
+      shuffleSpeed: 'shuffleMedium',
+      buttonType: ['A-Z', 'Z-A', 'top', 'fiat', 'shuffle'],
+      sortKey: 'symbol',
+      sortOrder: 1,
+      selectedIcons: [],
+      closeGuide: false,
+      selectedBtn: 'A-Z',
+      props: [
+        {
+          name: 'symbol',
+          description: 'Cryptocurrency symbol',
+          type: 'String',
+          default: '-',
+          accepted: 'Valid and Available'
+        },
+        {
+          name: 'color',
+          description: 'Color of the symbol',
+          type: 'String',
+          default: 'Original color icon',
+          accepted: 'HEX or color name'
+        },
+        {
+          name: 'size',
+          description: 'Size of the icon',
+          type: 'Number',
+          default: '24',
+          accepted: 'Positive integer'
+        }
+      ]
     };
+  },
+  computed: {
+    filteredCurrencies() {
+      return this.filterBy(this.currencies, this.searchValue, 'name', 'symbol');
+    },
+    selectedIconObj() {
+      return `{${this.selectedIcons.join(', ')}}`;
+    },
+    selectedIconArr() {
+      return `[${this.selectedIcons.join(', ')}]`;
+    }
+  },
+  methods: {
+    shuffleDeck() {
+      for (let i = this.currencies.length - 1; i > 0; i--) {
+        let randomIndex = Math.floor(Math.random() * i);
+        let temp = this.currencies[i];
+        Vue.set(this.currencies, i, this.currencies[randomIndex]);
+        Vue.set(this.currencies, randomIndex, temp);
+      }
+    },
+    filter(key) {
+      this.selectedBtn = key;
+      if (key == 'shuffle') {
+        this.shuffleDeck();
+      } else if (key == 'A-Z' || key == 'Z-A') {
+        if (key == 'Z-A') this.sortOrder = -1;
+        else this.sortOrder = 1;
+        this.sortKey = 'symbol';
+        this.sortCurrencies();
+      } else if (key == 'top') {
+        console.log(key);
+        this.sortKey = 'rank';
+        this.sortOrder = 1;
+        this.sortCurrencies();
+      } else {
+        this.sortKey = '';
+        this.sortOrder = 1;
+        this.sortCurrencies();
+      }
+    },
+    sortCurrencies() {
+      this.currencies = this.orderBy(
+        this.currencies,
+        this.sortKey,
+        this.sortOrder
+      );
+    },
+    selectIcon(symbol) {
+      const index = this.isSelected(symbol);
+      if (index > -1) {
+        this.selectedIcons.splice(index, 1);
+      } else {
+        const icon = symbol.toLowerCase().replace(/^\w/, c => c.toUpperCase());
+        this.selectedIcons.push(icon);
+      }
+    },
+    isSelected(symbol) {
+      const icon = symbol.toLowerCase().replace(/^\w/, c => c.toUpperCase());
+      const index = this.selectedIcons.indexOf(icon);
+      if (index > -1) {
+        return index;
+      } else {
+        return -1;
+      }
+    }
   }
 };
 </script>
 <style lang="scss">
 // variables
 @import './scss/main.scss';
+
 h1 {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 3.5rem;
   letter-spacing: 0.05rem;
 }
 .container {
   display: grid;
   position: relative;
-  grid-template-rows: 100px calc(100vh - 100px);
-  grid-template-columns: auto auto;
+  grid-template-rows: calc(100px + 4rem) calc(100vh - 100px - 4rem);
+  grid-template-columns: calc(100% - 70rem) 70rem;
   overflow: hidden;
+  font-size: 1.4rem;
+  @include transition;
+  &.full {
+    @include transition;
+    grid-template-columns: 100%;
+  }
+  @include desktop {
+    grid-template-columns: calc(100% - 60rem) 60rem;
+  }
+  @include tablet {
+    grid-template-columns: 50rem calc(100% - 50rem);
+  }
+  @include small-tablet {
+    grid-template-columns: 100%;
+  }
+  @include mobile {
+    grid-template-columns: 100%;
+  }
 }
 .search-wrapper {
   grid-row-start: 1;
   grid-column-start: 1;
   grid-column-end: 2;
+  position: relative;
   grid-row-end: 2;
+  padding: 2rem;
+  @include tablet {
+    padding: 3rem 2rem 2rem;
+  }
   height: 100px;
-  width: 100%;
+  width: calc(100% - 4rem);
   top: 0;
+  flex-direction: column;
   background: $bgSecondary;
   box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .search {
   background: #fff;
   border-radius: 3px;
   width: 100%;
-  max-width: 500px;
-  height: 2.5rem;
+  max-width: 70rem;
+  height: 3.7rem;
   display: inline-block;
   vertical-align: middle;
+  @include desktop {
+    max-width: 50rem;
+  }
   &--input {
     width: 100%;
-    height: 2.5rem;
+    height: 3.7rem;
     border: none;
     outline: none !important;
-    text-indent: 44px;
+    text-indent: 4.4rem;
     background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1Ni45NjYgNTYuOTY2Ij48cGF0aCBkPSJNNTUuMTQ2IDUxLjg4N0w0MS41ODggMzcuNzg2QTIyLjkyNiAyMi45MjYgMCAwIDAgNDYuOTg0IDIzYzAtMTIuNjgyLTEwLjMxOC0yMy0yMy0yM3MtMjMgMTAuMzE4LTIzIDIzIDEwLjMxOCAyMyAyMyAyM2M0Ljc2MSAwIDkuMjk4LTEuNDM2IDEzLjE3Ny00LjE2MmwxMy42NjEgMTQuMjA4Yy41NzEuNTkzIDEuMzM5LjkyIDIuMTYyLjkyLjc3OSAwIDEuNTE4LS4yOTcgMi4wNzktLjgzN2EzLjAwNCAzLjAwNCAwIDAgMCAuMDgzLTQuMjQyek0yMy45ODQgNmM5LjM3NCAwIDE3IDcuNjI2IDE3IDE3cy03LjYyNiAxNy0xNyAxNy0xNy03LjYyNi0xNy0xNyA3LjYyNi0xNyAxNy0xN3oiLz48L3N2Zz4=)
-      no-repeat 1rem 0.7rem;
-    background-size: 17px;
+      no-repeat 1.4rem 1.1rem;
+    background-size: 1.7rem;
     box-sizing: border-box;
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     font-family: 'Montserrat', sans-serif;
-    box-shadow: 0 20px 13px 1px rgba(22, 49, 80, 0.1);
+    box-shadow: 0 2rem 1.3rem 0.1rem rgba(22, 49, 80, 0.1);
   }
 }
 
+.button {
+  &-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 400px;
+    width: 100%;
+    align-items: center;
+  }
+  font-family: Montserrat, sans-serif;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  padding: 0.7rem 1.4rem;
+  border: 0;
+  margin: 0;
+  min-width: fit-content;
+  outline: none !important;
+  cursor: pointer;
+  text-align: center;
+  background-color: white;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  color: $textSecondary;
+  line-height: 1;
+  -webkit-transition: background-color 0.1s ease-out;
+  -o-transition: background-color 0.1s ease-out;
+  transition: background-color 0.1s ease-out;
+  &.selected {
+    background-color: $secondary;
+  }
+}
+
+// button {
 .icon-wrapper {
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  align-items: flex-start;
   grid-row-start: 2;
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-end: 3;
   overflow: scroll;
-  padding-top: 3rem;
+  padding-top: 2.8rem;
+  @include tablet {
+    padding-top: 3rem;
+  }
+  justify-content: space-around;
+  @include no-select;
   .icon {
-    padding: 1rem 2rem;
+    padding: 1.4rem 2.8rem;
     width: 230px;
     color: white;
     display: flex;
     background: $bgSecondary;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 0.4rem;
-    // transition: all 0.2s ease-in-out;
+    border-radius: 0.6rem;
+    margin-bottom: 2.8rem;
+    max-height: 4rem;
     cursor: pointer;
+
     &:hover {
       box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
-      border: 1px solid #4dbfb5;
-      margin-right: calc(2rem - 2px);
-      margin-bottom: calc(2rem - 2px);
-      // transition: all 0.2s ease-in-out;
+    }
+    &.selected {
+      // outline: 1px solid $secondary
+      box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px $secondary inset; // Inside white border 1px
     }
     h3 {
       margin: 0;
       font-weight: 300;
+      font-size: 1.3rem;
     }
     p {
       margin: 0;
-      margin-top: 0.4rem;
+      margin-top: 0.56rem;
       font-weight: 800;
       letter-spacing: 0.05rem;
+      font-size: 1.4rem;
     }
     .left {
-      margin-right: 2rem;
+      margin-right: 2.8rem;
     }
     .right {
       overflow: hidden;
@@ -149,22 +426,155 @@ h1 {
     }
   }
 }
+// shuffle transition
+
+.shuffleSlow-move {
+  transition: transform 2s;
+}
+
+.shuffleMedium-move {
+  transition: transform 1s;
+}
+
+.shuffleFast-move {
+  transition: transform 0.5s;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
 
 .guideline-wrapper {
   background: white;
-  max-width: 600px;
+  max-width: 70rem;
   height: 100vh;
-  padding: 3rem 2rem;
+  padding: 0 2.8rem 4.2rem;
   color: $textSecondary;
   grid-row-start: 1;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-end: 3;
-  h4 {
-    font-size: 1rem;
+  position: relative;
+  overflow: scroll;
+  right: 0;
+  .title {
+    padding: 1rem 0 0.05rem;
+    @include no-select;
+  }
+  @include small-tablet {
+    display: none;
+  }
+  @include mobile {
+    display: none;
+  }
+  h4,
+  p {
+    font-size: 1.4rem;
     font-weight: 400;
     color: $textMono;
-    line-height: 1.6rem;
+    line-height: 2.24rem;
+  }
+  p {
+    font-size: 1.3rem;
+  }
+  @include transition;
+
+  &.close {
+    @include transition;
+    right: -700px;
+    opacity: 0;
+  }
+}
+table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  display: block;
+  overflow-x: auto;
+  font-size: 1.4rem;
+  thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+  tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    border-top: 1px solid #dfe2e5;
+  }
+  th {
+    font-weight: bold;
+    text-align: -internal-center;
+  }
+  td,
+  th {
+    border: 1px solid #dfe2e5;
+    padding: 0.6em 1em;
+  }
+  tr {
+    border-top: 1px solid #dfe2e5;
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    &:nth-child(2n) {
+      background-color: #f6f8fa;
+    }
+    code {
+      background-color: rgba(27, 31, 35, 0.05);
+      border-radius: 3px;
+      font-size: 1.8rem;
+      margin: 0;
+      padding: 0.3em 0.5em;
+    }
+  }
+}
+.toggle-btn {
+  position: absolute;
+  right: -1px;
+  top: 0;
+  background: white;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4rem 0 0 0.4rem;
+  cursor: pointer;
+  @include no-select;
+  @include transition;
+  &:hover {
+    @include transition;
+    svg {
+      height: 2.2rem;
+      width: 2.2rem;
+      path {
+        fill: $textSecondary;
+      }
+    }
+  }
+  svg {
+    height: 2rem;
+    width: 2rem;
+    @include transition;
+    path {
+      fill: $textMono;
+    }
+    &.rotate {
+      @include transition;
+      transform: rotate(180deg);
+    }
+  }
+  @include small-tablet {
+    display: none;
+  }
+  @include mobile {
+    display: none;
   }
 }
 </style>

@@ -1,0 +1,27 @@
+html{
+    font-size: 62.5%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: $bgPrimary;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    outline: none !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    @include desktop{
+        font-size: 1.3rem;
+    }
+    @include tablet {
+        font-size: 1.1rem;
+    }
+    @include mobile {
+        font-size: 1rem;
+    }
+}
+
+a {
+    text-decoration: none;
+}

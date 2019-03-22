@@ -1,6 +1,9 @@
 import Vue from 'vue';
-import VueHighlightJS from 'vue-highlightjs';
-Vue.use(VueHighlightJS);
+import Vue2Filters from 'vue2-filters';
+import 'prismjs';
+import 'prismjs/themes/prism.css';
+
+Vue.use(Vue2Filters);
 
 import App from './App.vue';
 import Cryptoicon from './components';

@@ -1,0 +1,57 @@
+@mixin small-mobile {
+    @media (max-width: #{$xs-break - 1px}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$sm-break - 1px}) {
+        @content;
+    }
+}
+
+@mixin small-tablet {
+    @media (min-width: #{$sm-break}) and (max-width: #{$md-break - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$md-break}) and (max-width: #{$lg-break - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$lg-break}) and (max-width: #{$xl-break - 1px}) {
+        @content;
+    }
+}
+
+@mixin big-desktop {
+    @media (min-width: #{xl-break}) {
+        @content;
+    }
+}
+
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+    -webkit-transition: $what $time $how;
+    -moz-transition: $what $time $how;
+    -ms-transition: $what $time $how;
+    -o-transition: $what $time $how;
+    transition: $what $time $how;
+}
+
+@mixin no-select {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}

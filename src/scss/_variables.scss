@@ -1,3 +1,4 @@
+// Colors
 $primary: #133abd;
 $primaryHover: #0f309f;
 $secondary: #7bea9d;
@@ -8,3 +9,12 @@ $textMono: #707070;
 $textMono2: #b9b9b9;
 $bgPrimary: #303030;
 $bgSecondary: #424242;
+// Break points
+$xs-break:400px;
+$sm-break:768px;
+$md-break:992px;
+$lg-break:1200px;
+$xl-break:1392px;
+// Others
+$borderColor: rgba(94, 114, 169, 0.3);
+$footerText: #6d6d6d !default;

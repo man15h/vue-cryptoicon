@@ -2,7 +2,7 @@
   "name": "vue-cryptoicon",
   "version": "0.1.1",
   "description": "Beautiful pixel perfect 400+ cryptocurrency and 10+ Fiat currency icon",
-  "main": "index.js",
+  "main": "lib/vue-cryptoicon.common.js",
   "author": "man15h",
   "license": "MIT",
   "keywords": [
@@ -74,12 +74,13 @@
     "eslint-plugin-vue": "^4.0.0",
     "husky": "^1.3.1",
     "node-sass": "^4.11.0",
-    "prerender-spa-plugin": "^3.2.1",
     "prettier": "1.14.3",
+    "prismjs": "^1.15.0",
     "rimraf": "^2.6.3",
     "sass-loader": "^7.1.0",
     "vue": "^2.5.17",
-    "vue-highlightjs": "^1.3.3",
-    "vue-template-compiler": "^2.5.17"
+    "vue-prism-component": "^1.1.1",
+    "vue-template-compiler": "^2.5.17",
+    "vue2-filters": "^0.5.1"
   }
 }
