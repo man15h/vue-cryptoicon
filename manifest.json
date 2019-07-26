@@ -98,7 +98,11 @@
 	{
 		"symbol": "ATM",
 		"name": "ATMChain"
-	},
+  },
+  {
+    "symbol": "ATOM",
+    "name": "Cosmos"
+  },
 	{
 		"symbol": "AUDR",
 		"name": "AUDRamp"

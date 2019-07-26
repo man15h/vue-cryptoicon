@@ -22,6 +22,7 @@ import Arn from './arn';
 import Ary from './ary';
 import Ast from './ast';
 import Atm from './atm';
+import Atom from './atom';
 import Audr from './audr';
 import Auto from './auto';
 import Aywa from './aywa';
@@ -486,6 +487,7 @@ export {
   Ary,
   Ast,
   Atm,
+  Atom,
   Audr,
   Auto,
   Aywa,
@@ -928,6 +930,7 @@ export default [
   Ary,
   Ast,
   Atm,
+  Atom,
   Audr,
   Auto,
   Aywa,
