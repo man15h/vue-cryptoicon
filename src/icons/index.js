@@ -12,6 +12,7 @@ import Agrs from './agrs';
 import Aion from './aion';
 import Amb from './amb';
 import Amp from './amp';
+import Ampl from './ampl';
 import Ant from './ant';
 import Apex from './apex';
 import Appc from './appc';
@@ -62,13 +63,14 @@ import Btcd from './btcd';
 import Btch from './btch';
 import Btcp from './btcp';
 import Btcz from './btcz';
-import Btdx from './brd';
+import Btdx from './btdx';
 import Btg from './btg';
 import Btm from './btm';
 import Bts from './bts';
 import Btt from './btt';
 import Btx from './btx';
 import Burst from './burst';
+import Bze from './bze';
 
 // C icons
 import Call from './call';
@@ -99,6 +101,7 @@ import Ctxc from './ctxc';
 import Cvc from './cvc';
 
 // D icons
+import D from './d';
 import Dai from './dai';
 import Dash from './dash';
 import Dat from './dat';
@@ -115,6 +118,7 @@ import Dlt from './dlt';
 import Dnt from './dnt';
 import Dock from './dock';
 import Doge from './doge';
+import Dot from './dot';
 import Drgn from './drgn';
 import Drop from './drop';
 import Dta from './dta';
@@ -131,6 +135,7 @@ import Ela from './ela';
 import Elf from './elf';
 import Elix from './elix';
 import Ella from './ella';
+import Elec from './elec';
 import Emc from './emc';
 import Emc2 from './emc2';
 import Eng from './eng';
@@ -217,6 +222,7 @@ import Jpy from './jpy';
 // K icons
 import Kcs from './kcs';
 import Kin from './kin';
+import Klown from './klown';
 import Kmd from './kmd';
 import Knc from './knc';
 import Krb from './krb';
@@ -224,6 +230,7 @@ import Krb from './krb';
 // L icons
 import Lbc from './lbc';
 import Lend from './lend';
+import Leo from './leo';
 import Link from './link';
 import Lkk from './lkk';
 import Loom from './loom';
@@ -236,13 +243,14 @@ import Lun from './lun';
 // M icons
 import Maid from './maid';
 import Mana from './mana';
+import Matic from './matic';
 import Mcap from './mcap';
 import Mco from './mco';
 import Mda from './mda';
 import Mds from './mds';
 import Med from './med';
 import Meetone from './meetone';
-
+import Mft from './mft';
 import Miota from './miota';
 import Mith from './mith';
 import Mkr from './mkr';
@@ -330,6 +338,7 @@ import Rap from './rap';
 import Rcn from './rcn';
 import Rdd from './rdd';
 import Rdn from './rdn';
+import Ren from './ren';
 import Rep from './rep';
 import Req from './req';
 import Rhoc from './rhoc';
@@ -343,6 +352,7 @@ import Ryo from './ryo';
 
 // S icons
 import Safe from './safe';
+import Sai from './sai';
 import Salt from './salt';
 import San from './san';
 import Sbd from './sbd';
@@ -350,6 +360,7 @@ import Sberbank from './sberbank';
 import Sc from './sc';
 import Shift from './shift';
 import Sib from './sib';
+import Sin from './sin';
 import Sky from './sky';
 import Slr from './slr';
 import Sls from './sls';
@@ -462,6 +473,11 @@ import Zest from './zest';
 import Zil from './zil';
 import Zla from './zla';
 import Zrx from './zrx';
+import Spank from './spank';
+import Tgch from './tgch';
+import Xbp from './xbp';
+import Yfi from './yfi';
+import Zilla from './zilla';
 export {
   Abt,
   Act,
@@ -477,6 +493,7 @@ export {
   Aion,
   Amb,
   Amp,
+  Ampl,
   Ant,
   Apex,
   Appc,
@@ -533,6 +550,7 @@ export {
   Btt,
   Btx,
   Burst,
+  Bze,
   // C starts
   Call,
   Cc,
@@ -561,6 +579,7 @@ export {
   Cred,
   Cdt,
   // D starts
+  D,
   Dai,
   Dash,
   Dat,
@@ -577,6 +596,7 @@ export {
   Dnt,
   Dock,
   Doge,
+  Dot,
   Drgn,
   Drop,
   Dta,
@@ -589,6 +609,7 @@ export {
   Edo,
   Edoge,
   Ela,
+  Elec,
   Elf,
   Elix,
   Ella,
@@ -674,12 +695,14 @@ export {
   // K starts
   Kcs,
   Kin,
+  Klown,
   Kmd,
   Knc,
   Krb,
   // L starts
   Lbc,
   Lend,
+  Leo,
   Link,
   Lkk,
   Loom,
@@ -691,12 +714,14 @@ export {
   // M starts
   Maid,
   Mana,
+  Matic,
   Mcap,
   Mco,
   Mda,
   Mds,
   Med,
   Meetone,
+  Mft,
   Miota,
   Mith,
   Mkr,
@@ -779,6 +804,7 @@ export {
   Rcn,
   Rdd,
   Rdn,
+  Ren,
   Rep,
   Req,
   Rhoc,
@@ -791,6 +817,7 @@ export {
   Ryo,
   // S starts
   Safe,
+  Sai,
   Salt,
   San,
   Sbd,
@@ -798,6 +825,7 @@ export {
   Sc,
   Shift,
   Sib,
+  Sin,
   Sky,
   Slr,
   Sls,
@@ -806,6 +834,7 @@ export {
   Snm,
   Snt,
   Soc,
+  Spank,
   Spnk,
   Sphtx,
   Srn,
@@ -827,6 +856,7 @@ export {
   Ten,
   Tern,
   Theta,
+  Tgch,
   Tix,
   Tkn,
   Tks,
@@ -871,6 +901,7 @@ export {
   // X starts
   X,
   Xas,
+  Xbp,
   Xbc,
   Xby,
   Xcp,
@@ -895,6 +926,7 @@ export {
   Xzc,
   // Y starts
   Yoyow,
+  Yfi,
   // Z starts
   Zcl,
   Zec,
@@ -902,6 +934,7 @@ export {
   Zen,
   Zest,
   Zil,
+  Zilla,
   Zla,
   Zrx
 };
@@ -920,6 +953,7 @@ export default [
   Aion,
   Amb,
   Amp,
+  Ampl,
   Ant,
   Apex,
   Appc,
@@ -976,6 +1010,7 @@ export default [
   Btt,
   Btx,
   Burst,
+  Bze,
   // C starts
   Call,
   Cc,
@@ -1004,6 +1039,7 @@ export default [
   Cred,
   Cdt,
   // D starts
+  D,
   Dai,
   Dash,
   Dat,
@@ -1020,6 +1056,7 @@ export default [
   Dnt,
   Dock,
   Doge,
+  Dot,
   Drgn,
   Drop,
   Dta,
@@ -1032,6 +1069,7 @@ export default [
   Edo,
   Edoge,
   Ela,
+  Elec,
   Elf,
   Elix,
   Ella,
@@ -1054,8 +1092,7 @@ export default [
   Evx,
   Exmo,
   Exp,
-
-  // f starts
+  // F starts
   Fair,
   Fct,
   Fil,
@@ -1118,12 +1155,14 @@ export default [
   // K starts
   Kcs,
   Kin,
+  Klown,
   Kmd,
   Knc,
   Krb,
   // L starts
   Lbc,
   Lend,
+  Leo,
   Link,
   Lkk,
   Loom,
@@ -1135,12 +1174,14 @@ export default [
   // M starts
   Maid,
   Mana,
+  Matic,
   Mcap,
   Mco,
   Mda,
   Mds,
   Med,
   Meetone,
+  Mft,
   Miota,
   Mith,
   Mkr,
@@ -1223,6 +1264,7 @@ export default [
   Rcn,
   Rdd,
   Rdn,
+  Ren,
   Rep,
   Req,
   Rhoc,
@@ -1235,6 +1277,7 @@ export default [
   Ryo,
   // S starts
   Safe,
+  Sai,
   Salt,
   San,
   Sbd,
@@ -1242,6 +1285,7 @@ export default [
   Sc,
   Shift,
   Sib,
+  Sin,
   Sky,
   Slr,
   Sls,
@@ -1250,6 +1294,7 @@ export default [
   Snm,
   Snt,
   Soc,
+  Spank,
   Spnk,
   Sphtx,
   Srn,
@@ -1271,6 +1316,7 @@ export default [
   Ten,
   Tern,
   Theta,
+  Tgch,
   Tix,
   Tkn,
   Tks,
@@ -1315,6 +1361,7 @@ export default [
   // X starts
   X,
   Xas,
+  Xbp,
   Xbc,
   Xby,
   Xcp,
@@ -1339,6 +1386,7 @@ export default [
   Xzc,
   // Y starts
   Yoyow,
+  Yfi,
   // Z starts
   Zcl,
   Zec,
@@ -1346,6 +1394,7 @@ export default [
   Zen,
   Zest,
   Zil,
+  Zilla,
   Zla,
   Zrx
 ];

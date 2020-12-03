@@ -59,8 +59,8 @@
       tag="div" 
       class="icon-wrapper">
       <div 
-        v-for="currency in filteredCurrencies" 
-        :key="currency.id+currency.symbol"
+        v-for="(currency, index) in filteredCurrencies" 
+        :key="index+currency.symbol"
         :class="{'selected': isSelected(currency.symbol) > -1}"
         class="icon"
         @click="selectIcon(currency.symbol)" >
