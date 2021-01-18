@@ -10,6 +10,7 @@ import Aeur from './aeur';
 import Agi from './agi';
 import Agrs from './agrs';
 import Aion from './aion';
+import Algo from './algo';
 import Amb from './amb';
 import Amp from './amp';
 import Ampl from './ampl';
@@ -20,6 +21,7 @@ import Ardr from './ardr';
 import Arg from './arg';
 import Ark from './ark';
 import Arn from './arn';
+import Arnx from './arnx';
 import Ary from './ary';
 import Ast from './ast';
 import Atm from './atm';
@@ -30,6 +32,8 @@ import Aywa from './aywa';
 
 // B icons
 import Bab from './bab';
+import Bal from './bal';
+import Band from './band';
 import Bat from './bat';
 import Bay from './bay';
 import Bcbc from './bcbc';
@@ -91,6 +95,7 @@ import Cnx from './cnx';
 import Cny from './cny';
 import Cob from './cob';
 import Colx from './colx';
+import Comp from './comp';
 import Coqui from './coqui';
 import Cred from './cred';
 import Crpt from './crpt';
@@ -282,6 +287,7 @@ import Nio from './nio';
 import Nlc2 from './nlc2';
 import Nlg from './nlg';
 import Nmc from './nmc';
+import Nmr from './nmr';
 import Npxs from './npxs';
 import Nuls from './nuls';
 import Nxs from './nxs';
@@ -297,6 +303,7 @@ import Ont from './ont';
 import Oot from './oot';
 import Ost from './ost';
 import Ox from './ox';
+import Oxt from './oxt';
 
 // P icons
 import Part from './part';
@@ -340,6 +347,7 @@ import Rdd from './rdd';
 import Rdn from './rdn';
 import Ren from './ren';
 import Rep from './rep';
+import Repv2 from './repv2';
 import Req from './req';
 import Rhoc from './rhoc';
 import Ric from './ric';
@@ -379,6 +387,7 @@ import Storj from './storj';
 import Storm from './storm';
 import Stq from './stq';
 import Strat from './strat';
+import Stx from './stx';
 import Sub from './sub';
 import Sumo from './sumo';
 import Sys from './sys';
@@ -407,6 +416,8 @@ import Tzc from './tzc';
 
 // U icons
 import Ubq from './ubq';
+import Uma from './uma';
+import Uni from './uni';
 import Unity from './unity';
 import Usd from './usd';
 import Usdc from './usdc';
@@ -429,6 +440,7 @@ import Wabi from './wabi';
 import Wan from './wan';
 import Waves from './waves';
 import Wax from './wax';
+import Wbtc from './wbtc';
 import Wgr from './wgr';
 import Wicc from './wicc';
 import Wings from './wings';
@@ -936,7 +948,19 @@ export {
   Zil,
   Zilla,
   Zla,
-  Zrx
+  Zrx,
+  Algo,
+  Arnx,
+  Bal,
+  Band,
+  Comp,
+  Nmr,
+  Oxt,
+  Repv2,
+  Stx,
+  Uma,
+  Uni,
+  Wbtc
 };
 export default [
   Abt,
@@ -1396,5 +1420,17 @@ export default [
   Zil,
   Zilla,
   Zla,
-  Zrx
+  Zrx,
+  Algo,
+  Arnx,
+  Bal,
+  Band,
+  Comp,
+  Nmr,
+  Oxt,
+  Repv2,
+  Stx,
+  Uma,
+  Uni,
+  Wbtc
 ];
