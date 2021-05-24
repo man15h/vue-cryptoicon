@@ -1,6 +1,6 @@
 {
   "name": "vue-cryptoicon",
-  "version": "0.17.1",
+  "version": "0.17.2",
   "description": "Beautiful pixel perfect 400+ cryptocurrency and 10+ Fiat currency icon",
   "main": "lib/vue-cryptoicon.common.js",
   "author": "man15h",
@@ -46,7 +46,7 @@
     "prod": "cross-env NODE_ENV=production vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test": "npm run test:unit",
-    "update": "node -r esm scripts/updateManifest.js && node scripts/fetchDetails.js",
+    "update": "node -r esm scripts/build.js  && node -r esm scripts/updateManifest.js && node scripts/fetchDetails.js",
     "new": "node -r esm scripts/newIcons.js",
     "update:manifest": "node -r esm scripts/updateManifest.js"
   },
@@ -68,7 +68,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "cross-env": "^5.2.0",
-    "cryptocurrency-icons": "^0.10.1",
+    "cryptocurrency-icons": "^0.17.2",
     "eslint": "^5.15.1",
     "eslint-config-prettier": "^3.1.0",
     "eslint-loader": "^2.1.2",

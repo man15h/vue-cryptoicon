@@ -1,3 +1,7 @@
+import $pac from './$pac';
+import ZeroxBtc from './zeroxbtc';
+import TwoGive from './twogive';
+import Aave from './aave';
 import Abt from './abt';
 import Act from './act';
 import Actn from './actn';
@@ -14,6 +18,7 @@ import Algo from './algo';
 import Amb from './amb';
 import Amp from './amp';
 import Ampl from './ampl';
+import Ankr from './ankr';
 import Ant from './ant';
 import Apex from './apex';
 import Appc from './appc';
@@ -29,8 +34,6 @@ import Atom from './atom';
 import Audr from './audr';
 import Auto from './auto';
 import Aywa from './aywa';
-
-// B icons
 import Bab from './bab';
 import Bal from './bal';
 import Band from './band';
@@ -75,8 +78,6 @@ import Btt from './btt';
 import Btx from './btx';
 import Burst from './burst';
 import Bze from './bze';
-
-// C icons
 import Call from './call';
 import Cc from './cc';
 import Cdn from './cdn';
@@ -99,13 +100,12 @@ import Comp from './comp';
 import Coqui from './coqui';
 import Cred from './cred';
 import Crpt from './crpt';
+import Crv from './crv';
 import Crw from './crw';
 import Cs from './cs';
 import Ctr from './ctr';
 import Ctxc from './ctxc';
 import Cvc from './cvc';
-
-// D icons
 import D from './d';
 import Dai from './dai';
 import Dash from './dash';
@@ -129,18 +129,16 @@ import Drop from './drop';
 import Dta from './dta';
 import Dth from './dth';
 import Dtr from './dtr';
-
-// E icons
 import Ebst from './ebst';
 import Eca from './eca';
 import Edg from './edg';
 import Edo from './edo';
 import Edoge from './edoge';
 import Ela from './ela';
+import Elec from './elec';
 import Elf from './elf';
 import Elix from './elix';
 import Ella from './ella';
-import Elec from './elec';
 import Emc from './emc';
 import Emc2 from './emc2';
 import Eng from './eng';
@@ -160,8 +158,6 @@ import Eur from './eur';
 import Evx from './evx';
 import Exmo from './exmo';
 import Exp from './exp';
-
-// F icons
 import Fair from './fair';
 import Fct from './fct';
 import Fil from './fil';
@@ -172,8 +168,6 @@ import Fsn from './fsn';
 import Ftc from './ftc';
 import Fuel from './fuel';
 import Fun from './fun';
-
-// G icons
 import Game from './game';
 import Gas from './gas';
 import Gbp from './gbp';
@@ -189,6 +183,7 @@ import Gold from './gold';
 import Grc from './grc';
 import Grin from './grin';
 import Grs from './grs';
+import Grt from './grt';
 import Gsc from './gsc';
 import Gto from './gto';
 import Gup from './gup';
@@ -196,7 +191,6 @@ import Gusd from './gusd';
 import Gvt from './gvt';
 import Gxs from './gxs';
 import Gzr from './gzr';
-// H icons
 import Hight from './hight';
 import Hodl from './hodl';
 import Hot from './hot';
@@ -206,7 +200,6 @@ import Ht from './ht';
 import Html from './html';
 import Huc from './huc';
 import Hush from './hush';
-// I icons
 import Icn from './icn';
 import Icx from './icx';
 import Ignis from './ignis';
@@ -219,20 +212,15 @@ import Iost from './iost';
 import Iotx from './iotx';
 import Iq from './iq';
 import Itc from './itc';
-
-// J icons
 import Jnt from './jnt';
 import Jpy from './jpy';
-
-// K icons
 import Kcs from './kcs';
 import Kin from './kin';
 import Klown from './klown';
 import Kmd from './kmd';
 import Knc from './knc';
 import Krb from './krb';
-
-// L icons
+import Ksm from './ksm';
 import Lbc from './lbc';
 import Lend from './lend';
 import Leo from './leo';
@@ -244,8 +232,6 @@ import Lrc from './lrc';
 import Lsk from './lsk';
 import Ltc from './ltc';
 import Lun from './lun';
-
-// M icons
 import Maid from './maid';
 import Mana from './mana';
 import Matic from './matic';
@@ -270,8 +256,6 @@ import Mth from './mth';
 import Mtl from './mtl';
 import Music from './music';
 import Mzc from './mzc';
-
-// N icons
 import Nano from './nano';
 import Nas from './nas';
 import Nav from './nav';
@@ -284,6 +268,7 @@ import Neu from './neu';
 import Nexo from './nexo';
 import Ngc from './ngc';
 import Nio from './nio';
+import Nkn from './nkn';
 import Nlc2 from './nlc2';
 import Nlg from './nlg';
 import Nmc from './nmc';
@@ -292,8 +277,6 @@ import Npxs from './npxs';
 import Nuls from './nuls';
 import Nxs from './nxs';
 import Nxt from './nxt';
-
-// O icons
 import Oax from './oax';
 import Ok from './ok';
 import Omg from './omg';
@@ -304,8 +287,6 @@ import Oot from './oot';
 import Ost from './ost';
 import Ox from './ox';
 import Oxt from './oxt';
-
-// P icons
 import Part from './part';
 import Pasc from './pasc';
 import Pasl from './pasl';
@@ -329,16 +310,12 @@ import Pre from './pre';
 import Prl from './prl';
 import Pungo from './pungo';
 import Pura from './pura';
-
-// Q icons
 import Qash from './qash';
 import Qiwi from './qiwi';
 import Qlc from './qlc';
 import Qrl from './qrl';
 import Qsp from './qsp';
 import Qtum from './qtum';
-
-// R icons
 import R from './r';
 import Rads from './rads';
 import Rap from './rap';
@@ -357,8 +334,6 @@ import Rpx from './rpx';
 import Rub from './rub';
 import Rvn from './rvn';
 import Ryo from './ryo';
-
-// S icons
 import Safe from './safe';
 import Sai from './sai';
 import Salt from './salt';
@@ -376,8 +351,10 @@ import Smart from './smart';
 import Sngls from './sngls';
 import Snm from './snm';
 import Snt from './snt';
+import Snx from './snx';
 import Soc from './soc';
-import Spnk from './spnk';
+import Sol from './sol';
+import Spank from './spank';
 import Sphtx from './sphtx';
 import Srn from './srn';
 import Stak from './stak';
@@ -385,20 +362,21 @@ import Start from './start';
 import Steem from './steem';
 import Storj from './storj';
 import Storm from './storm';
+import Stox from './stox';
 import Stq from './stq';
 import Strat from './strat';
 import Stx from './stx';
 import Sub from './sub';
 import Sumo from './sumo';
+import Sushi from './sushi';
 import Sys from './sys';
-
-// T icons
 import Taas from './taas';
 import Tau from './tau';
 import Tbx from './tbx';
 import Tel from './tel';
 import Ten from './ten';
 import Tern from './tern';
+import Tgch from './tgch';
 import Theta from './theta';
 import Tix from './tix';
 import Tkn from './tkn';
@@ -413,8 +391,6 @@ import Trtl from './trtl';
 import Trx from './trx';
 import Tusd from './tusd';
 import Tzc from './tzc';
-
-// U icons
 import Ubq from './ubq';
 import Uma from './uma';
 import Uni from './uni';
@@ -423,8 +399,6 @@ import Usd from './usd';
 import Usdc from './usdc';
 import Usdt from './usdt';
 import Utk from './utk';
-
-// V icons
 import Veri from './veri';
 import Vet from './vet';
 import Via from './via';
@@ -435,7 +409,6 @@ import Vrc from './vrc';
 import Vrsc from './vrsc';
 import Vtc from './vtc';
 import Vtho from './vtho';
-// W icons
 import Wabi from './wabi';
 import Wan from './wan';
 import Waves from './waves';
@@ -446,11 +419,10 @@ import Wicc from './wicc';
 import Wings from './wings';
 import Wpr from './wpr';
 import Wtc from './wtc';
-
-// X icons
 import X from './x';
 import Xas from './xas';
 import Xbc from './xbc';
+import Xbp from './xbp';
 import Xby from './xby';
 import Xcp from './xcp';
 import Xdn from './xdn';
@@ -472,25 +444,21 @@ import Xuc from './xuc';
 import Xvc from './xvc';
 import Xvg from './xvg';
 import Xzc from './xzc';
-
-// Y icons
+import Yfi from './yfi';
 import Yoyow from './yoyow';
-
-// Z icons
 import Zcl from './zcl';
 import Zec from './zec';
 import Zel from './zel';
 import Zen from './zen';
 import Zest from './zest';
 import Zil from './zil';
-import Zla from './zla';
-import Zrx from './zrx';
-import Spank from './spank';
-import Tgch from './tgch';
-import Xbp from './xbp';
-import Yfi from './yfi';
 import Zilla from './zilla';
+import Zrx from './zrx';
 export {
+  $pac,
+  ZeroxBtc,
+  TwoGive,
+  Aave,
   Abt,
   Act,
   Actn,
@@ -503,9 +471,11 @@ export {
   Agi,
   Agrs,
   Aion,
+  Algo,
   Amb,
   Amp,
   Ampl,
+  Ankr,
   Ant,
   Apex,
   Appc,
@@ -513,6 +483,7 @@ export {
   Arg,
   Ark,
   Arn,
+  Arnx,
   Ary,
   Ast,
   Atm,
@@ -520,8 +491,9 @@ export {
   Audr,
   Auto,
   Aywa,
-  // B starts
   Bab,
+  Bal,
+  Band,
   Bat,
   Bay,
   Bcbc,
@@ -563,10 +535,10 @@ export {
   Btx,
   Burst,
   Bze,
-  // C starts
   Call,
   Cc,
   Cdn,
+  Cdt,
   Cenz,
   Chain,
   Chat,
@@ -575,22 +547,22 @@ export {
   Clam,
   Cloak,
   Cmm,
-  Cnd,
   Cmt,
+  Cnd,
   Cnx,
   Cny,
   Cob,
-  Coqui,
   Colx,
+  Comp,
+  Coqui,
+  Cred,
   Crpt,
+  Crv,
   Crw,
   Cs,
   Ctr,
   Ctxc,
   Cvc,
-  Cred,
-  Cdt,
-  // D starts
   D,
   Dai,
   Dash,
@@ -614,7 +586,6 @@ export {
   Dta,
   Dth,
   Dtr,
-  // E starts
   Ebst,
   Eca,
   Edg,
@@ -644,7 +615,6 @@ export {
   Evx,
   Exmo,
   Exp,
-  // F starts
   Fair,
   Fct,
   Fil,
@@ -655,7 +625,6 @@ export {
   Ftc,
   Fuel,
   Fun,
-  // G starts
   Game,
   Gas,
   Gbp,
@@ -671,6 +640,7 @@ export {
   Grc,
   Grin,
   Grs,
+  Grt,
   Gsc,
   Gto,
   Gup,
@@ -678,7 +648,6 @@ export {
   Gvt,
   Gxs,
   Gzr,
-  // H starts
   Hight,
   Hodl,
   Hot,
@@ -688,7 +657,6 @@ export {
   Html,
   Huc,
   Hush,
-  // I starts
   Icn,
   Icx,
   Ignis,
@@ -701,17 +669,15 @@ export {
   Iotx,
   Iq,
   Itc,
-  // J starts
   Jnt,
   Jpy,
-  // K starts
   Kcs,
   Kin,
   Klown,
   Kmd,
   Knc,
   Krb,
-  // L starts
+  Ksm,
   Lbc,
   Lend,
   Leo,
@@ -723,7 +689,6 @@ export {
   Lsk,
   Ltc,
   Lun,
-  // M starts
   Maid,
   Mana,
   Matic,
@@ -748,7 +713,6 @@ export {
   Mtl,
   Music,
   Mzc,
-  // N starts
   Nano,
   Nas,
   Nav,
@@ -761,14 +725,15 @@ export {
   Nexo,
   Ngc,
   Nio,
+  Nkn,
   Nlc2,
   Nlg,
   Nmc,
+  Nmr,
   Npxs,
   Nuls,
   Nxs,
   Nxt,
-  // O starts
   Oax,
   Ok,
   Omg,
@@ -778,7 +743,7 @@ export {
   Oot,
   Ost,
   Ox,
-  //P Starts,
+  Oxt,
   Part,
   Pasc,
   Pasl,
@@ -802,14 +767,12 @@ export {
   Prl,
   Pungo,
   Pura,
-  //Q Starts,
   Qash,
   Qiwi,
   Qlc,
   Qrl,
   Qsp,
   Qtum,
-  // R starts
   R,
   Rads,
   Rap,
@@ -818,6 +781,7 @@ export {
   Rdn,
   Ren,
   Rep,
+  Repv2,
   Req,
   Rhoc,
   Ric,
@@ -827,7 +791,6 @@ export {
   Rub,
   Rvn,
   Ryo,
-  // S starts
   Safe,
   Sai,
   Salt,
@@ -845,9 +808,10 @@ export {
   Sngls,
   Snm,
   Snt,
+  Snx,
   Soc,
+  Sol,
   Spank,
-  Spnk,
   Sphtx,
   Srn,
   Stak,
@@ -855,20 +819,22 @@ export {
   Steem,
   Storj,
   Storm,
+  Stox,
   Stq,
   Strat,
+  Stx,
   Sub,
   Sumo,
+  Sushi,
   Sys,
-  // T starts
   Taas,
   Tau,
   Tbx,
   Tel,
   Ten,
   Tern,
-  Theta,
   Tgch,
+  Theta,
   Tix,
   Tkn,
   Tks,
@@ -882,14 +848,14 @@ export {
   Trx,
   Tusd,
   Tzc,
-  // U starts
   Ubq,
+  Uma,
+  Uni,
   Unity,
   Usd,
   Usdc,
   Usdt,
   Utk,
-  // V starts
   Veri,
   Vet,
   Via,
@@ -900,21 +866,20 @@ export {
   Vrsc,
   Vtc,
   Vtho,
-  // W starts
   Wabi,
   Wan,
   Waves,
   Wax,
+  Wbtc,
   Wgr,
   Wicc,
   Wings,
   Wpr,
   Wtc,
-  // X starts
   X,
   Xas,
-  Xbp,
   Xbc,
+  Xbp,
   Xby,
   Xcp,
   Xdn,
@@ -936,10 +901,8 @@ export {
   Xvc,
   Xvg,
   Xzc,
-  // Y starts
-  Yoyow,
   Yfi,
-  // Z starts
+  Yoyow,
   Zcl,
   Zec,
   Zel,
@@ -947,22 +910,13 @@ export {
   Zest,
   Zil,
   Zilla,
-  Zla,
-  Zrx,
-  Algo,
-  Arnx,
-  Bal,
-  Band,
-  Comp,
-  Nmr,
-  Oxt,
-  Repv2,
-  Stx,
-  Uma,
-  Uni,
-  Wbtc
+  Zrx
 };
 export default [
+  $pac,
+  ZeroxBtc,
+  TwoGive,
+  Aave,
   Abt,
   Act,
   Actn,
@@ -975,9 +929,11 @@ export default [
   Agi,
   Agrs,
   Aion,
+  Algo,
   Amb,
   Amp,
   Ampl,
+  Ankr,
   Ant,
   Apex,
   Appc,
@@ -985,6 +941,7 @@ export default [
   Arg,
   Ark,
   Arn,
+  Arnx,
   Ary,
   Ast,
   Atm,
@@ -992,8 +949,9 @@ export default [
   Audr,
   Auto,
   Aywa,
-  // B starts
   Bab,
+  Bal,
+  Band,
   Bat,
   Bay,
   Bcbc,
@@ -1035,10 +993,10 @@ export default [
   Btx,
   Burst,
   Bze,
-  // C starts
   Call,
   Cc,
   Cdn,
+  Cdt,
   Cenz,
   Chain,
   Chat,
@@ -1047,22 +1005,22 @@ export default [
   Clam,
   Cloak,
   Cmm,
-  Cnd,
   Cmt,
+  Cnd,
   Cnx,
   Cny,
   Cob,
-  Coqui,
   Colx,
+  Comp,
+  Coqui,
+  Cred,
   Crpt,
+  Crv,
   Crw,
   Cs,
   Ctr,
   Ctxc,
   Cvc,
-  Cred,
-  Cdt,
-  // D starts
   D,
   Dai,
   Dash,
@@ -1086,7 +1044,6 @@ export default [
   Dta,
   Dth,
   Dtr,
-  // E starts
   Ebst,
   Eca,
   Edg,
@@ -1116,7 +1073,6 @@ export default [
   Evx,
   Exmo,
   Exp,
-  // F starts
   Fair,
   Fct,
   Fil,
@@ -1127,7 +1083,6 @@ export default [
   Ftc,
   Fuel,
   Fun,
-  // G starts
   Game,
   Gas,
   Gbp,
@@ -1143,6 +1098,7 @@ export default [
   Grc,
   Grin,
   Grs,
+  Grt,
   Gsc,
   Gto,
   Gup,
@@ -1150,7 +1106,6 @@ export default [
   Gvt,
   Gxs,
   Gzr,
-  // H starts
   Hight,
   Hodl,
   Hot,
@@ -1160,7 +1115,6 @@ export default [
   Html,
   Huc,
   Hush,
-  // I starts
   Icn,
   Icx,
   Ignis,
@@ -1173,17 +1127,15 @@ export default [
   Iotx,
   Iq,
   Itc,
-  // J starts
   Jnt,
   Jpy,
-  // K starts
   Kcs,
   Kin,
   Klown,
   Kmd,
   Knc,
   Krb,
-  // L starts
+  Ksm,
   Lbc,
   Lend,
   Leo,
@@ -1195,7 +1147,6 @@ export default [
   Lsk,
   Ltc,
   Lun,
-  // M starts
   Maid,
   Mana,
   Matic,
@@ -1220,7 +1171,6 @@ export default [
   Mtl,
   Music,
   Mzc,
-  // N starts
   Nano,
   Nas,
   Nav,
@@ -1233,14 +1183,15 @@ export default [
   Nexo,
   Ngc,
   Nio,
+  Nkn,
   Nlc2,
   Nlg,
   Nmc,
+  Nmr,
   Npxs,
   Nuls,
   Nxs,
   Nxt,
-  // O starts
   Oax,
   Ok,
   Omg,
@@ -1250,7 +1201,7 @@ export default [
   Oot,
   Ost,
   Ox,
-  //P Starts,
+  Oxt,
   Part,
   Pasc,
   Pasl,
@@ -1274,14 +1225,12 @@ export default [
   Prl,
   Pungo,
   Pura,
-  //Q Starts,
   Qash,
   Qiwi,
   Qlc,
   Qrl,
   Qsp,
   Qtum,
-  // R starts
   R,
   Rads,
   Rap,
@@ -1290,6 +1239,7 @@ export default [
   Rdn,
   Ren,
   Rep,
+  Repv2,
   Req,
   Rhoc,
   Ric,
@@ -1299,7 +1249,6 @@ export default [
   Rub,
   Rvn,
   Ryo,
-  // S starts
   Safe,
   Sai,
   Salt,
@@ -1317,9 +1266,10 @@ export default [
   Sngls,
   Snm,
   Snt,
+  Snx,
   Soc,
+  Sol,
   Spank,
-  Spnk,
   Sphtx,
   Srn,
   Stak,
@@ -1327,20 +1277,22 @@ export default [
   Steem,
   Storj,
   Storm,
+  Stox,
   Stq,
   Strat,
+  Stx,
   Sub,
   Sumo,
+  Sushi,
   Sys,
-  // T starts
   Taas,
   Tau,
   Tbx,
   Tel,
   Ten,
   Tern,
-  Theta,
   Tgch,
+  Theta,
   Tix,
   Tkn,
   Tks,
@@ -1354,14 +1306,14 @@ export default [
   Trx,
   Tusd,
   Tzc,
-  // U starts
   Ubq,
+  Uma,
+  Uni,
   Unity,
   Usd,
   Usdc,
   Usdt,
   Utk,
-  // V starts
   Veri,
   Vet,
   Via,
@@ -1372,21 +1324,20 @@ export default [
   Vrsc,
   Vtc,
   Vtho,
-  // W starts
   Wabi,
   Wan,
   Waves,
   Wax,
+  Wbtc,
   Wgr,
   Wicc,
   Wings,
   Wpr,
   Wtc,
-  // X starts
   X,
   Xas,
-  Xbp,
   Xbc,
+  Xbp,
   Xby,
   Xcp,
   Xdn,
@@ -1408,10 +1359,8 @@ export default [
   Xvc,
   Xvg,
   Xzc,
-  // Y starts
-  Yoyow,
   Yfi,
-  // Z starts
+  Yoyow,
   Zcl,
   Zec,
   Zel,
@@ -1419,18 +1368,5 @@ export default [
   Zest,
   Zil,
   Zilla,
-  Zla,
-  Zrx,
-  Algo,
-  Arnx,
-  Bal,
-  Band,
-  Comp,
-  Nmr,
-  Oxt,
-  Repv2,
-  Stx,
-  Uma,
-  Uni,
-  Wbtc
+  Zrx
 ];
