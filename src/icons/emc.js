@@ -2,10 +2,10 @@ const Emc = {
   symbol: 'emc',
   color: '#000',
   colorIcon() {
-    return `<g fill="none" fill-rule="evenodd"><circle cx="16" cy="16" r="16" fill="#B49FFC"/><path fill="#FFF" d="M8 8v3.2h6.4v3.2H8v3.2h9.6v-6.4h3.2v9.6H8V24h16V8z"/></g>`;
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="none" fill-rule="evenodd"><circle cx="16" cy="16" r="16" fill="#B49FFC"/><path fill="#FFF" d="M8 8v3.2h6.4v3.2H8v3.2h9.6v-6.4h3.2v9.6H8V24h16V8z"/></g>`;
   },
   plainIcon: c => {
-    return `<path fill-rule="evenodd" fill="${
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill-rule="evenodd" fill="${
       c ? c : this.color
     }" fill-rule="evenodd" d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16-7.163 16-16 16zM8 8v3.2h6.4v3.2H8v3.2h9.6v-6.4h3.2v9.6H8V24h16V8H8z"/>`;
   }

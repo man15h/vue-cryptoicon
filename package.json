@@ -68,7 +68,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "cross-env": "^5.2.0",
-    "cryptocurrency-icons": "^0.17.2",
+    "cryptocurrency-icons": "^0.18.0",
     "eslint": "^5.15.1",
     "eslint-config-prettier": "^3.1.0",
     "eslint-loader": "^2.1.2",
