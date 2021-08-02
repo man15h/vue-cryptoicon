@@ -1,6 +1,6 @@
 {
   "name": "vue-cryptoicon",
-  "version": "0.17.2",
+  "version": "0.18.0",
   "description": "Beautiful pixel perfect 400+ cryptocurrency and 10+ Fiat currency icon",
   "main": "lib/vue-cryptoicon.common.js",
   "author": "man15h",
