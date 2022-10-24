@@ -33,6 +33,7 @@ import Atm from './atm';
 import Atom from './atom';
 import Audr from './audr';
 import Auto from './auto';
+import Avax from './avax';
 import Aywa from './aywa';
 import Bab from './bab';
 import Bal from './bal';
@@ -505,6 +506,7 @@ export {
   Atom,
   Audr,
   Auto,
+  Avax,
   Aywa,
   Bab,
   Bal,
@@ -978,6 +980,7 @@ export default [
   Atom,
   Audr,
   Auto,
+  Avax,
   Aywa,
   Bab,
   Bal,
