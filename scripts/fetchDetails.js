@@ -22,7 +22,13 @@ const fiatCurrencies = new Map([
 async function fetchData(symbol) {
   try {
     const { data } = await axios.get(
-      `https://api.coinranking.com/v1/public/coins?symbols=${symbol}`
+      `https://api.coinranking.com/v2/coins?symbols=${symbol}`,
+      {
+        headers: {
+          'x-access-token':
+            'coinrankingc9f38c16ea4bbd406159a1db7d827fa812015dc0967012ce'
+        }
+      }
     );
     return data;
   } catch (error) {

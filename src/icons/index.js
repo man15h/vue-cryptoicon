@@ -1,5 +1,6 @@
 import $pac from './$pac';
 import ZeroxBtc from './zeroxbtc';
+import OneInch from './oneinch';
 import TwoGive from './twogive';
 import Aave from './aave';
 import Abt from './abt';
@@ -20,6 +21,7 @@ import Amp from './amp';
 import Ampl from './ampl';
 import Ankr from './ankr';
 import Ant from './ant';
+import Ape from './ape';
 import Apex from './apex';
 import Appc from './appc';
 import Ardr from './ardr';
@@ -29,10 +31,13 @@ import Arn from './arn';
 import Arnx from './arnx';
 import Ary from './ary';
 import Ast from './ast';
+import Atlas from './atlas';
 import Atm from './atm';
 import Atom from './atom';
 import Audr from './audr';
+import Aury from './aury';
 import Auto from './auto';
+import Avax from './avax';
 import Aywa from './aywa';
 import Bab from './bab';
 import Bal from './bal';
@@ -87,6 +92,7 @@ import Chain from './chain';
 import Chat from './chat';
 import Chips from './chips';
 import Chsb from './chsb';
+import Chz from './chz';
 import Cix from './cix';
 import Clam from './clam';
 import Cloak from './cloak';
@@ -162,6 +168,7 @@ import Exmo from './exmo';
 import Exp from './exp';
 import Fair from './fair';
 import Fct from './fct';
+import Fida from './fida';
 import Fil from './fil';
 import Fjc from './fjc';
 import Fldc from './fldc';
@@ -180,6 +187,7 @@ import Generic from './generic';
 import Gin from './gin';
 import Glxt from './glxt';
 import Gmr from './gmr';
+import Gmt from './gmt';
 import Gno from './gno';
 import Gnt from './gnt';
 import Gold from './gold';
@@ -296,6 +304,7 @@ import Oot from './oot';
 import Ost from './ost';
 import Ox from './ox';
 import Oxt from './oxt';
+import Oxy from './oxy';
 import Part from './part';
 import Pasc from './pasc';
 import Pasl from './pasl';
@@ -323,12 +332,14 @@ import Pura from './pura';
 import Qash from './qash';
 import Qiwi from './qiwi';
 import Qlc from './qlc';
+import Qnt from './qnt';
 import Qrl from './qrl';
 import Qsp from './qsp';
 import Qtum from './qtum';
 import R from './r';
 import Rads from './rads';
 import Rap from './rap';
+import Ray from './ray';
 import Rcn from './rcn';
 import Rdd from './rdd';
 import Rdn from './rdn';
@@ -353,6 +364,7 @@ import Sand from './sand';
 import Sbd from './sbd';
 import Sberbank from './sberbank';
 import Sc from './sc';
+import Ser from './ser';
 import Shift from './shift';
 import Sib from './sib';
 import Sin from './sin';
@@ -472,6 +484,7 @@ import Zrx from './zrx';
 export {
   $pac,
   ZeroxBtc,
+  OneInch,
   TwoGive,
   Aave,
   Abt,
@@ -492,6 +505,7 @@ export {
   Ampl,
   Ankr,
   Ant,
+  Ape,
   Apex,
   Appc,
   Ardr,
@@ -501,10 +515,13 @@ export {
   Arnx,
   Ary,
   Ast,
+  Atlas,
   Atm,
   Atom,
   Audr,
+  Aury,
   Auto,
+  Avax,
   Aywa,
   Bab,
   Bal,
@@ -559,6 +576,7 @@ export {
   Chat,
   Chips,
   Chsb,
+  Chz,
   Cix,
   Clam,
   Cloak,
@@ -634,6 +652,7 @@ export {
   Exp,
   Fair,
   Fct,
+  Fida,
   Fil,
   Fjc,
   Fldc,
@@ -652,6 +671,7 @@ export {
   Gin,
   Glxt,
   Gmr,
+  Gmt,
   Gno,
   Gnt,
   Gold,
@@ -768,6 +788,7 @@ export {
   Ost,
   Ox,
   Oxt,
+  Oxy,
   Part,
   Pasc,
   Pasl,
@@ -795,12 +816,14 @@ export {
   Qash,
   Qiwi,
   Qlc,
+  Qnt,
   Qrl,
   Qsp,
   Qtum,
   R,
   Rads,
   Rap,
+  Ray,
   Rcn,
   Rdd,
   Rdn,
@@ -825,6 +848,7 @@ export {
   Sbd,
   Sberbank,
   Sc,
+  Ser,
   Shift,
   Sib,
   Sin,
@@ -945,6 +969,7 @@ export {
 export default [
   $pac,
   ZeroxBtc,
+  OneInch,
   TwoGive,
   Aave,
   Abt,
@@ -965,6 +990,7 @@ export default [
   Ampl,
   Ankr,
   Ant,
+  Ape,
   Apex,
   Appc,
   Ardr,
@@ -974,10 +1000,13 @@ export default [
   Arnx,
   Ary,
   Ast,
+  Atlas,
   Atm,
   Atom,
   Audr,
+  Aury,
   Auto,
+  Avax,
   Aywa,
   Bab,
   Bal,
@@ -1032,6 +1061,7 @@ export default [
   Chat,
   Chips,
   Chsb,
+  Chz,
   Cix,
   Clam,
   Cloak,
@@ -1107,6 +1137,7 @@ export default [
   Exp,
   Fair,
   Fct,
+  Fida,
   Fil,
   Fjc,
   Fldc,
@@ -1125,6 +1156,7 @@ export default [
   Gin,
   Glxt,
   Gmr,
+  Gmt,
   Gno,
   Gnt,
   Gold,
@@ -1241,6 +1273,7 @@ export default [
   Ost,
   Ox,
   Oxt,
+  Oxy,
   Part,
   Pasc,
   Pasl,
@@ -1268,12 +1301,14 @@ export default [
   Qash,
   Qiwi,
   Qlc,
+  Qnt,
   Qrl,
   Qsp,
   Qtum,
   R,
   Rads,
   Rap,
+  Ray,
   Rcn,
   Rdd,
   Rdn,
@@ -1298,6 +1333,7 @@ export default [
   Sbd,
   Sberbank,
   Sc,
+  Ser,
   Shift,
   Sib,
   Sin,

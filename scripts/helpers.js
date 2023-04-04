@@ -5,6 +5,8 @@ exports.fixName = name => {
       return 'ZeroxBtc';
     case '2give':
       return 'TwoGive';
+    case '1inch':
+      return 'OneInch';
     default:
       return name;
   }
